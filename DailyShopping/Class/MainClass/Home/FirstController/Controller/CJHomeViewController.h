@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CJHomeViewController.h
 //  DailyShopping
 //
 //  Created by Cijian on 2016/10/20.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CJBaseViewController.h"
 
-@interface ViewController : UIViewController
-
+@interface CJHomeViewController : CJBaseViewController
 
 @end
-

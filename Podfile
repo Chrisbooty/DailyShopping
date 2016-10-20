@@ -7,6 +7,7 @@ pod 'SDWebImage'
 pod 'IQKeyboardManager'
 pod 'MJRefresh'
 pod 'MBProgressHUD'
-pod 'MJExtension'
+#pod 'MJExtension'
+pod 'YYModel'
 
 end

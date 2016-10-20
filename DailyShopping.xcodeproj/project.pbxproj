@@ -9,11 +9,19 @@
 /* Begin PBXBuildFile section */
 		39FC52A11DB866B000BFC34E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52A01DB866B000BFC34E /* main.m */; };
 		39FC52A41DB866B000BFC34E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52A31DB866B000BFC34E /* AppDelegate.m */; };
-		39FC52A71DB866B000BFC34E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52A61DB866B000BFC34E /* ViewController.m */; };
 		39FC52AA1DB866B000BFC34E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39FC52A81DB866B000BFC34E /* Main.storyboard */; };
 		39FC52AD1DB866B000BFC34E /* DailyShopping.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52AB1DB866B000BFC34E /* DailyShopping.xcdatamodeld */; };
 		39FC52AF1DB866B000BFC34E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39FC52AE1DB866B000BFC34E /* Assets.xcassets */; };
 		39FC52B21DB866B000BFC34E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39FC52B01DB866B000BFC34E /* LaunchScreen.storyboard */; };
+		39FC52DF1DB88AD700BFC34E /* CJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52DE1DB88AD700BFC34E /* CJHomeViewController.m */; };
+		39FC52E21DB88AE700BFC34E /* CJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52E11DB88AE700BFC34E /* CJBaseViewController.m */; };
+		39FC52E51DB88BF100BFC34E /* CJLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52E41DB88BF100BFC34E /* CJLabel.m */; };
+		39FC52E91DB88C8000BFC34E /* CJHomeChildCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52E71DB88C8000BFC34E /* CJHomeChildCollectionViewController.m */; };
+		39FC52EE1DB88E8900BFC34E /* CJHomeChildCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52EC1DB88E8900BFC34E /* CJHomeChildCollectionCell.m */; };
+		39FC52EF1DB88E8900BFC34E /* CJHomeChildCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39FC52ED1DB88E8900BFC34E /* CJHomeChildCollectionCell.xib */; };
+		39FC52F31DB8985F00BFC34E /* CJHomeChildTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52F11DB8985F00BFC34E /* CJHomeChildTableViewController.m */; };
+		39FC52F41DB8985F00BFC34E /* CJHomeChildTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39FC52F21DB8985F00BFC34E /* CJHomeChildTableViewController.xib */; };
+		39FC52FC1DB8A3C900BFC34E /* CJHomeCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52FB1DB8A3C900BFC34E /* CJHomeCollectionModel.m */; };
 		BF9E4005095247A8B629B10D /* libPods-DailyShopping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 862720DBCB06DE656167CBB2 /* libPods-DailyShopping.a */; };
 /* End PBXBuildFile section */
 
@@ -22,13 +30,28 @@
 		39FC52A01DB866B000BFC34E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39FC52A21DB866B000BFC34E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		39FC52A31DB866B000BFC34E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		39FC52A51DB866B000BFC34E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		39FC52A61DB866B000BFC34E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		39FC52A91DB866B000BFC34E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39FC52AC1DB866B000BFC34E /* DailyShopping.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyShopping.xcdatamodel; sourceTree = "<group>"; };
 		39FC52AE1DB866B000BFC34E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39FC52B11DB866B000BFC34E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39FC52B31DB866B000BFC34E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39FC52DD1DB88AD700BFC34E /* CJHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHomeViewController.h; sourceTree = "<group>"; };
+		39FC52DE1DB88AD700BFC34E /* CJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHomeViewController.m; sourceTree = "<group>"; };
+		39FC52E01DB88AE700BFC34E /* CJBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseViewController.h; sourceTree = "<group>"; };
+		39FC52E11DB88AE700BFC34E /* CJBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseViewController.m; sourceTree = "<group>"; };
+		39FC52E31DB88BF100BFC34E /* CJLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJLabel.h; sourceTree = "<group>"; };
+		39FC52E41DB88BF100BFC34E /* CJLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJLabel.m; sourceTree = "<group>"; };
+		39FC52E61DB88C8000BFC34E /* CJHomeChildCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHomeChildCollectionViewController.h; sourceTree = "<group>"; };
+		39FC52E71DB88C8000BFC34E /* CJHomeChildCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHomeChildCollectionViewController.m; sourceTree = "<group>"; };
+		39FC52EB1DB88E8900BFC34E /* CJHomeChildCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHomeChildCollectionCell.h; sourceTree = "<group>"; };
+		39FC52EC1DB88E8900BFC34E /* CJHomeChildCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHomeChildCollectionCell.m; sourceTree = "<group>"; };
+		39FC52ED1DB88E8900BFC34E /* CJHomeChildCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJHomeChildCollectionCell.xib; sourceTree = "<group>"; };
+		39FC52F01DB8985F00BFC34E /* CJHomeChildTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHomeChildTableViewController.h; sourceTree = "<group>"; };
+		39FC52F11DB8985F00BFC34E /* CJHomeChildTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHomeChildTableViewController.m; sourceTree = "<group>"; };
+		39FC52F21DB8985F00BFC34E /* CJHomeChildTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJHomeChildTableViewController.xib; sourceTree = "<group>"; };
+		39FC52F71DB89D9D00BFC34E /* CJHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHeader.h; sourceTree = "<group>"; };
+		39FC52FA1DB8A3C900BFC34E /* CJHomeCollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHomeCollectionModel.h; sourceTree = "<group>"; };
+		39FC52FB1DB8A3C900BFC34E /* CJHomeCollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHomeCollectionModel.m; sourceTree = "<group>"; };
 		862720DBCB06DE656167CBB2 /* libPods-DailyShopping.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DailyShopping.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		967D63B54974B6DF24F28C6A /* Pods-DailyShopping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyShopping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyShopping/Pods-DailyShopping.debug.xcconfig"; sourceTree = "<group>"; };
 		BCDDF08CB54334C47C5DAAE8 /* Pods-DailyShopping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyShopping.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyShopping/Pods-DailyShopping.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,9 +93,6 @@
 				39FC52A81DB866B000BFC34E /* Main.storyboard */,
 				39FC52AE1DB866B000BFC34E /* Assets.xcassets */,
 				39FC52B91DB874BA00BFC34E /* Class */,
-				39FC52D81DB874C600BFC34E /* Header */,
-				39FC52A51DB866B000BFC34E /* ViewController.h */,
-				39FC52A61DB866B000BFC34E /* ViewController.m */,
 				39FC529F1DB866B000BFC34E /* Supporting Files */,
 			);
 			path = DailyShopping;
@@ -95,10 +115,11 @@
 			isa = PBXGroup;
 			children = (
 				39FC52BA1DB874BA00BFC34E /* BaseClass */,
-				39FC52BB1DB874BA00BFC34E /* Category */,
 				39FC52BC1DB874BA00BFC34E /* MainClass */,
+				39FC52BB1DB874BA00BFC34E /* Category */,
 				39FC52D61DB874BA00BFC34E /* Thrid */,
 				39FC52D71DB874BA00BFC34E /* Tool */,
+				39FC52F61DB89D9D00BFC34E /* Header */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -106,6 +127,8 @@
 		39FC52BA1DB874BA00BFC34E /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				39FC52E01DB88AE700BFC34E /* CJBaseViewController.h */,
+				39FC52E11DB88AE700BFC34E /* CJBaseViewController.m */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -132,6 +155,7 @@
 		39FC52BD1DB874BA00BFC34E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				39FC52D91DB88A1F00BFC34E /* FirstChildController */,
 				39FC52BE1DB874BA00BFC34E /* FirstController */,
 			);
 			path = Home;
@@ -150,6 +174,8 @@
 		39FC52BF1DB874BA00BFC34E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				39FC52DD1DB88AD700BFC34E /* CJHomeViewController.h */,
+				39FC52DE1DB88AD700BFC34E /* CJHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,6 +190,8 @@
 		39FC52C11DB874BA00BFC34E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				39FC52E31DB88BF100BFC34E /* CJLabel.h */,
+				39FC52E41DB88BF100BFC34E /* CJLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -338,9 +366,51 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
-		39FC52D81DB874C600BFC34E /* Header */ = {
+		39FC52D91DB88A1F00BFC34E /* FirstChildController */ = {
 			isa = PBXGroup;
 			children = (
+				39FC52DA1DB88A1F00BFC34E /* Controller */,
+				39FC52DB1DB88A1F00BFC34E /* Model */,
+				39FC52DC1DB88A1F00BFC34E /* View */,
+			);
+			path = FirstChildController;
+			sourceTree = "<group>";
+		};
+		39FC52DA1DB88A1F00BFC34E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39FC52E61DB88C8000BFC34E /* CJHomeChildCollectionViewController.h */,
+				39FC52E71DB88C8000BFC34E /* CJHomeChildCollectionViewController.m */,
+				39FC52F01DB8985F00BFC34E /* CJHomeChildTableViewController.h */,
+				39FC52F11DB8985F00BFC34E /* CJHomeChildTableViewController.m */,
+				39FC52F21DB8985F00BFC34E /* CJHomeChildTableViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39FC52DB1DB88A1F00BFC34E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39FC52FA1DB8A3C900BFC34E /* CJHomeCollectionModel.h */,
+				39FC52FB1DB8A3C900BFC34E /* CJHomeCollectionModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39FC52DC1DB88A1F00BFC34E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				39FC52EB1DB88E8900BFC34E /* CJHomeChildCollectionCell.h */,
+				39FC52EC1DB88E8900BFC34E /* CJHomeChildCollectionCell.m */,
+				39FC52ED1DB88E8900BFC34E /* CJHomeChildCollectionCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39FC52F61DB89D9D00BFC34E /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				39FC52F71DB89D9D00BFC34E /* CJHeader.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -391,6 +461,7 @@
 		39FC52941DB866B000BFC34E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CJ;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Cijian;
 				TargetAttributes = {
@@ -424,9 +495,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39FC52F41DB8985F00BFC34E /* CJHomeChildTableViewController.xib in Resources */,
 				39FC52B21DB866B000BFC34E /* LaunchScreen.storyboard in Resources */,
 				39FC52AF1DB866B000BFC34E /* Assets.xcassets in Resources */,
 				39FC52AA1DB866B000BFC34E /* Main.storyboard in Resources */,
+				39FC52EF1DB88E8900BFC34E /* CJHomeChildCollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,10 +558,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39FC52A71DB866B000BFC34E /* ViewController.m in Sources */,
+				39FC52E21DB88AE700BFC34E /* CJBaseViewController.m in Sources */,
+				39FC52DF1DB88AD700BFC34E /* CJHomeViewController.m in Sources */,
+				39FC52E91DB88C8000BFC34E /* CJHomeChildCollectionViewController.m in Sources */,
 				39FC52AD1DB866B000BFC34E /* DailyShopping.xcdatamodeld in Sources */,
+				39FC52EE1DB88E8900BFC34E /* CJHomeChildCollectionCell.m in Sources */,
 				39FC52A41DB866B000BFC34E /* AppDelegate.m in Sources */,
 				39FC52A11DB866B000BFC34E /* main.m in Sources */,
+				39FC52FC1DB8A3C900BFC34E /* CJHomeCollectionModel.m in Sources */,
+				39FC52E51DB88BF100BFC34E /* CJLabel.m in Sources */,
+				39FC52F31DB8985F00BFC34E /* CJHomeChildTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
