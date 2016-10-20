@@ -14,6 +14,7 @@
 		39FC52AD1DB866B000BFC34E /* DailyShopping.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52AB1DB866B000BFC34E /* DailyShopping.xcdatamodeld */; };
 		39FC52AF1DB866B000BFC34E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39FC52AE1DB866B000BFC34E /* Assets.xcassets */; };
 		39FC52B21DB866B000BFC34E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39FC52B01DB866B000BFC34E /* LaunchScreen.storyboard */; };
+		BF9E4005095247A8B629B10D /* libPods-DailyShopping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 862720DBCB06DE656167CBB2 /* libPods-DailyShopping.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		39FC52AE1DB866B000BFC34E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39FC52B11DB866B000BFC34E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39FC52B31DB866B000BFC34E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		862720DBCB06DE656167CBB2 /* libPods-DailyShopping.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DailyShopping.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		967D63B54974B6DF24F28C6A /* Pods-DailyShopping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyShopping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyShopping/Pods-DailyShopping.debug.xcconfig"; sourceTree = "<group>"; };
+		BCDDF08CB54334C47C5DAAE8 /* Pods-DailyShopping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyShopping.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyShopping/Pods-DailyShopping.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9E4005095247A8B629B10D /* libPods-DailyShopping.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				39FC529E1DB866B000BFC34E /* DailyShopping */,
 				39FC529D1DB866B000BFC34E /* Products */,
+				BADD5E77ADF49CB6BF3596F8 /* Pods */,
+				6A4C0C35E0C1A726A764B790 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +89,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6A4C0C35E0C1A726A764B790 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				862720DBCB06DE656167CBB2 /* libPods-DailyShopping.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BADD5E77ADF49CB6BF3596F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				967D63B54974B6DF24F28C6A /* Pods-DailyShopping.debug.xcconfig */,
+				BCDDF08CB54334C47C5DAAE8 /* Pods-DailyShopping.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39FC52B61DB866B000BFC34E /* Build configuration list for PBXNativeTarget "DailyShopping" */;
 			buildPhases = (
+				80573147AD66E6CE751BC9D7 /* [CP] Check Pods Manifest.lock */,
 				39FC52981DB866B000BFC34E /* Sources */,
 				39FC52991DB866B000BFC34E /* Frameworks */,
 				39FC529A1DB866B000BFC34E /* Resources */,
+				92245DB176C7AE9063CDBEE5 /* [CP] Embed Pods Frameworks */,
+				112AD0A716CE92D786EE6D9B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -113,6 +140,7 @@
 				TargetAttributes = {
 					39FC529B1DB866B000BFC34E = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = EZ9549DPUB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -147,6 +175,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		112AD0A716CE92D786EE6D9B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DailyShopping/Pods-DailyShopping-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80573147AD66E6CE751BC9D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		92245DB176C7AE9063CDBEE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DailyShopping/Pods-DailyShopping-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		39FC52981DB866B000BFC34E /* Sources */ = {
@@ -272,8 +348,10 @@
 		};
 		39FC52B71DB866B000BFC34E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 967D63B54974B6DF24F28C6A /* Pods-DailyShopping.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EZ9549DPUB;
 				INFOPLIST_FILE = DailyShopping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cijianWu.DailyShopping;
@@ -283,8 +361,10 @@
 		};
 		39FC52B81DB866B000BFC34E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCDDF08CB54334C47C5DAAE8 /* Pods-DailyShopping.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EZ9549DPUB;
 				INFOPLIST_FILE = DailyShopping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cijianWu.DailyShopping;
@@ -311,6 +391,7 @@
 				39FC52B81DB866B000BFC34E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
