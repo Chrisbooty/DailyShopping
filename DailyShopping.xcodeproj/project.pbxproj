@@ -1,0 +1,331 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39FC52A11DB866B000BFC34E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52A01DB866B000BFC34E /* main.m */; };
+		39FC52A41DB866B000BFC34E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52A31DB866B000BFC34E /* AppDelegate.m */; };
+		39FC52A71DB866B000BFC34E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52A61DB866B000BFC34E /* ViewController.m */; };
+		39FC52AA1DB866B000BFC34E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39FC52A81DB866B000BFC34E /* Main.storyboard */; };
+		39FC52AD1DB866B000BFC34E /* DailyShopping.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52AB1DB866B000BFC34E /* DailyShopping.xcdatamodeld */; };
+		39FC52AF1DB866B000BFC34E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39FC52AE1DB866B000BFC34E /* Assets.xcassets */; };
+		39FC52B21DB866B000BFC34E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39FC52B01DB866B000BFC34E /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39FC529C1DB866B000BFC34E /* DailyShopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyShopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39FC52A01DB866B000BFC34E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		39FC52A21DB866B000BFC34E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		39FC52A31DB866B000BFC34E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		39FC52A51DB866B000BFC34E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		39FC52A61DB866B000BFC34E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		39FC52A91DB866B000BFC34E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		39FC52AC1DB866B000BFC34E /* DailyShopping.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyShopping.xcdatamodel; sourceTree = "<group>"; };
+		39FC52AE1DB866B000BFC34E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		39FC52B11DB866B000BFC34E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		39FC52B31DB866B000BFC34E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39FC52991DB866B000BFC34E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39FC52931DB866B000BFC34E = {
+			isa = PBXGroup;
+			children = (
+				39FC529E1DB866B000BFC34E /* DailyShopping */,
+				39FC529D1DB866B000BFC34E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		39FC529D1DB866B000BFC34E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39FC529C1DB866B000BFC34E /* DailyShopping.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39FC529E1DB866B000BFC34E /* DailyShopping */ = {
+			isa = PBXGroup;
+			children = (
+				39FC52A21DB866B000BFC34E /* AppDelegate.h */,
+				39FC52A31DB866B000BFC34E /* AppDelegate.m */,
+				39FC52A51DB866B000BFC34E /* ViewController.h */,
+				39FC52A61DB866B000BFC34E /* ViewController.m */,
+				39FC52A81DB866B000BFC34E /* Main.storyboard */,
+				39FC52AE1DB866B000BFC34E /* Assets.xcassets */,
+				39FC52B01DB866B000BFC34E /* LaunchScreen.storyboard */,
+				39FC52B31DB866B000BFC34E /* Info.plist */,
+				39FC52AB1DB866B000BFC34E /* DailyShopping.xcdatamodeld */,
+				39FC529F1DB866B000BFC34E /* Supporting Files */,
+			);
+			path = DailyShopping;
+			sourceTree = "<group>";
+		};
+		39FC529F1DB866B000BFC34E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39FC52A01DB866B000BFC34E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39FC529B1DB866B000BFC34E /* DailyShopping */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39FC52B61DB866B000BFC34E /* Build configuration list for PBXNativeTarget "DailyShopping" */;
+			buildPhases = (
+				39FC52981DB866B000BFC34E /* Sources */,
+				39FC52991DB866B000BFC34E /* Frameworks */,
+				39FC529A1DB866B000BFC34E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailyShopping;
+			productName = DailyShopping;
+			productReference = 39FC529C1DB866B000BFC34E /* DailyShopping.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39FC52941DB866B000BFC34E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Cijian;
+				TargetAttributes = {
+					39FC529B1DB866B000BFC34E = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 39FC52971DB866B000BFC34E /* Build configuration list for PBXProject "DailyShopping" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 39FC52931DB866B000BFC34E;
+			productRefGroup = 39FC529D1DB866B000BFC34E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39FC529B1DB866B000BFC34E /* DailyShopping */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39FC529A1DB866B000BFC34E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39FC52B21DB866B000BFC34E /* LaunchScreen.storyboard in Resources */,
+				39FC52AF1DB866B000BFC34E /* Assets.xcassets in Resources */,
+				39FC52AA1DB866B000BFC34E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39FC52981DB866B000BFC34E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39FC52A71DB866B000BFC34E /* ViewController.m in Sources */,
+				39FC52AD1DB866B000BFC34E /* DailyShopping.xcdatamodeld in Sources */,
+				39FC52A41DB866B000BFC34E /* AppDelegate.m in Sources */,
+				39FC52A11DB866B000BFC34E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		39FC52A81DB866B000BFC34E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39FC52A91DB866B000BFC34E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		39FC52B01DB866B000BFC34E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39FC52B11DB866B000BFC34E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		39FC52B41DB866B000BFC34E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		39FC52B51DB866B000BFC34E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		39FC52B71DB866B000BFC34E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DailyShopping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cijianWu.DailyShopping;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		39FC52B81DB866B000BFC34E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DailyShopping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cijianWu.DailyShopping;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39FC52971DB866B000BFC34E /* Build configuration list for PBXProject "DailyShopping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39FC52B41DB866B000BFC34E /* Debug */,
+				39FC52B51DB866B000BFC34E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39FC52B61DB866B000BFC34E /* Build configuration list for PBXNativeTarget "DailyShopping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39FC52B71DB866B000BFC34E /* Debug */,
+				39FC52B81DB866B000BFC34E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		39FC52AB1DB866B000BFC34E /* DailyShopping.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				39FC52AC1DB866B000BFC34E /* DailyShopping.xcdatamodel */,
+			);
+			currentVersion = 39FC52AC1DB866B000BFC34E /* DailyShopping.xcdatamodel */;
+			path = DailyShopping.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 39FC52941DB866B000BFC34E /* Project object */;
+}
