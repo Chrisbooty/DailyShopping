@@ -8,7 +8,8 @@
 
 #import "CJHomeViewController.h"
 #import "CJLabel.h"
-#import "CJHomeChildViewController.h"
+#import "CJHomeChildTableViewController.h"
+#import "CJHomeChildCollectionViewController.h"
 
 @interface CJHomeViewController ()
 /**
@@ -27,12 +28,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    _controllerScrollView.contentSize = CGSizeMake(CWidth +20, 0);
+    
+    [self setUpChildController];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    UIViewController *VC = self.childViewControllers.lastObject;
+    VC.view.frame = _controllerScrollView.bounds;
+    
 }
 
 #pragma mark -添加子控制器
 - (void)setUpChildController
 {
-    //
+    //首页控制器
+    CJHomeChildTableViewController *homeChildTableVC = [[CJHomeChildTableViewController alloc] initWithNibName:@"CJHomeChildTableViewController" bundle:nil];
+    
+    [self addChildViewController:homeChildTableVC];
+    
+    
+    
+    [_controllerScrollView addSubview:homeChildTableVC.view];
+    
 }
 
 

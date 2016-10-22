@@ -41,4 +41,10 @@
     // Initialization code
 }
 
+- (void)setModel:(CJHomeCollectionModel *)model
+{
+    _model = model;
+    
+}
+
 @end

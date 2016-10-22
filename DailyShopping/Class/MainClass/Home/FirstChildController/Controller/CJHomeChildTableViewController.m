@@ -2,13 +2,26 @@
 //  CJHomeChildTableViewController.m
 //  DailyShopping
 //
-//  Created by Cijian on 2016/10/20.
+//  Created by Cijian on 2016/10/21.
 //  Copyright © 2016年 Cijian. All rights reserved.
 //
 
 #import "CJHomeChildTableViewController.h"
+#import "CJHomeChildTableHeaderView.h"
+#import "LXNetworking.h"
+#import <YYModel/YYModel.h>
 
-@interface CJHomeChildTableViewController ()
+@interface CJHomeChildTableViewController () <UITableViewDelegate,UITableViewDataSource>
+
+/** tableView - CJHomeChildTableViewController */
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+
+/** tableView - 数据源 */
+@property (nonatomic, strong) NSMutableArray *dataArrM;
+
+/** headerView */
+@property (nonatomic, weak) CJHomeChildTableHeaderView *headerView;
 
 @end
 
@@ -17,98 +30,86 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    //    //创建tableView
+    //    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    //    _tableView.delegate = self;
+    //    _tableView.dataSource = self;
+//    [self.view addSubview:_tableView];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//    [self createBannerView];
+    
+    //设置contentInset，防止Tabbar遮住内容
+    _tableView.contentInset = UIEdgeInsetsMake(0, 0, 49, 0);
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self createBannerView];
+}
+
+
+
+#pragma mark -创建banner并获取数据
+- (void)createBannerView
+{
+    //设置headerView
+    _headerView = [[[NSBundle mainBundle] loadNibNamed:@"CJHomeChildTableHeaderView" owner:nil options:nil] lastObject];
+    _tableView.tableHeaderView = _headerView;
+    
+    //获取轮播图数据
+    [LXNetworking getWithUrl:CJHomeCarouselURL params:nil success:^(id response) {
+        
+        NSArray *arr = response;
+        
+        for (NSDictionary *dict in arr) {
+            @autoreleasepool {
+                CJHomeChildTableBannerModel *model = [CJHomeChildTableBannerModel yy_modelWithJSON:dict];
+                if (model) {
+                    [self.dataArrM addObject:model];
+                }
+            }
+        }
+        _headerView = [[[NSBundle mainBundle] loadNibNamed:@"CJHomeChildTableHeaderView" owner:nil options:nil] lastObject];
+        
+        _headerView.bannerModelArr = _dataArrM;
+        _tableView.tableHeaderView = _headerView;
+        
+    } fail:^(NSError *error) {
+        NSLog(@"---+++ %@",error);
+    } showHUD:YES andController:self];
+}
+
+#pragma mark - TableView dataSource function
+#pragma mark -TableView --section
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+#pragma mark -TableView --row
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    //    return self.dataArrM.count;
+    return 10;
+}
+#pragma mark -TableView --cell
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [UITableViewCell new];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+    return cell;
+}
+
+- (NSMutableArray *)dataArrM
+{
+    if (_dataArrM == nil) {
+        _dataArrM = [NSMutableArray array];
+    }
+    return _dataArrM;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Table view delegate
-
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

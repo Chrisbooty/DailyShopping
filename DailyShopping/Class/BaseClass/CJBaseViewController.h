@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CJURL.h"
 
 @interface CJBaseViewController : UIViewController
 

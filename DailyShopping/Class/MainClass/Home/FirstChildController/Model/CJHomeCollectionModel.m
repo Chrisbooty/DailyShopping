@@ -8,6 +8,7 @@
 
 #import "CJHomeCollectionModel.h"
 
+
 @implementation CJHomeCollectionModel
 
 @end

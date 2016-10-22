@@ -7,9 +7,10 @@
 //
 
 #import "CJHomeChildCollectionViewController.h"
+#import "CJHomeChildCollectionCell.h"
 
-#define CWidth [UIScreen mainScreen].bounds.size.width
-#define CHeight [UIScreen mainScreen].bounds.size.height
+
+static NSString * const ID = @"CJHomeChildCollectionCell";
 
 static CGFloat const column = 2;
 
@@ -34,12 +35,16 @@ static CGFloat const column = 2;
     UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
     flowLayout.minimumLineSpacing = 1;
     flowLayout.minimumInteritemSpacing = 1;
+    
     //创建collectionView
     _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     
     [self.view addSubview:_collectionView];
+    
+    //注册cell
+    [_collectionView registerNib:[UINib nibWithNibName:@"CJHomeChildCollectionCell" bundle:nil] forCellWithReuseIdentifier:ID];
     
     
 }
@@ -58,7 +63,10 @@ static CGFloat const column = 2;
 #pragma mark -CollectionView --cell
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell ;
+    CJHomeChildCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+    
+    cell.model = _dataArrM[indexPath.row];
+    
     return cell;
 }
 

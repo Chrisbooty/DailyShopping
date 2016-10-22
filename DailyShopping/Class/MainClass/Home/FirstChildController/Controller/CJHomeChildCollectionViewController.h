@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CJHomeChildTableHeaderView.h"
 @interface CJHomeChildCollectionViewController : UIViewController
 
 @end
