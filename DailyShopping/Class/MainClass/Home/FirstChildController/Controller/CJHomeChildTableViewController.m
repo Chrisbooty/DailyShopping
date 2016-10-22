@@ -9,47 +9,91 @@
 #import "CJHomeChildTableViewController.h"
 #import "CJHomeChildTableHeaderView.h"
 #import "LXNetworking.h"
-#import <YYModel/YYModel.h>
+#import "CJHomeChildTableViewCell.h"
+#import "CJTableView.h"
 
 @interface CJHomeChildTableViewController () <UITableViewDelegate,UITableViewDataSource>
 
-/** tableView - CJHomeChildTableViewController */
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
-
-/** tableView - 数据源 */
+/** 
+ tableView - CJHomeChildTableViewController 
+ */
+@property (weak, nonatomic) IBOutlet CJTableView *tableView;
+/** 
+ tableView - 数据源
+ */
 @property (nonatomic, strong) NSMutableArray *dataArrM;
-
-/** headerView */
+/**
+ tableView 普通cell - 数据源
+ */
+@property (nonatomic, strong) NSMutableArray *commonModelArr;
+/** 
+ headerView 
+ */
 @property (nonatomic, weak) CJHomeChildTableHeaderView *headerView;
 
+
+
 @end
+
+static NSString * const commonID = @"CJHomeChildTableViewCell";
 
 @implementation CJHomeChildTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //    //创建tableView
-    //    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    //    _tableView.delegate = self;
-    //    _tableView.dataSource = self;
-//    [self.view addSubview:_tableView];
-    
-//    [self createBannerView];
-    
+    //获取默认page值
+    [self getDefaultPage];
     //设置contentInset，防止Tabbar遮住内容
     _tableView.contentInset = UIEdgeInsetsMake(0, 0, 49, 0);
+    //设置上下拉刷新控件
+    [_tableView setTableViewRefreshWithController:self];
     
+    //注册cell
+    [_tableView registerNib:[UINib nibWithNibName:@"CJHomeChildTableViewCell" bundle:nil] forCellReuseIdentifier:commonID];
+    _tableView.estimatedRowHeight = 300;
+    
+    [self requestCellData];
+    
+}
+#pragma mark -获取默认page值
+- (void)getDefaultPage
+{
+    self.page = 1;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [self createBannerView];
 }
-
-
-
+#pragma mark -tableView 获取数据
+- (void)requestCellData
+{
+    CJWeakSelf
+    [LXNetworking getWithUrl:[NSString stringWithFormat:CJHomeRecommandCellURL,self.page] params:nil success:^(id response) {
+        //普通cell
+        if (weakSelf.isUpRefresh) {
+            [weakSelf.commonModelArr removeAllObjects];
+        }
+        NSArray *commonCellArr = response[@"goods_list"];
+        for (NSDictionary *dict in commonCellArr) {
+            CJHomeChildTableCellModel *model = [CJHomeChildTableCellModel yy_modelWithJSON:dict];
+            if (model) {
+                [self.commonModelArr addObject:model];
+            }
+        }
+        [weakSelf.tableView reloadData];
+        [weakSelf endRefreshing];
+    } fail:^(NSError *error) {
+        [weakSelf endRefreshing];
+    } showHUD:NO andController:self];
+}
+- (void)endRefreshing
+{
+    CJWeakSelf
+    [weakSelf.tableView.mj_header endRefreshing];
+    [weakSelf.tableView.mj_footer endRefreshing];
+}
 #pragma mark -创建banner并获取数据
 - (void)createBannerView
 {
@@ -61,18 +105,18 @@
     [LXNetworking getWithUrl:CJHomeCarouselURL params:nil success:^(id response) {
         
         NSArray *arr = response;
-        
+        NSMutableArray *bannerArrM = [NSMutableArray array];
         for (NSDictionary *dict in arr) {
             @autoreleasepool {
                 CJHomeChildTableBannerModel *model = [CJHomeChildTableBannerModel yy_modelWithJSON:dict];
                 if (model) {
-                    [self.dataArrM addObject:model];
+                    [bannerArrM addObject:model];
                 }
             }
         }
         _headerView = [[[NSBundle mainBundle] loadNibNamed:@"CJHomeChildTableHeaderView" owner:nil options:nil] lastObject];
         
-        _headerView.bannerModelArr = _dataArrM;
+        _headerView.bannerModelArr = bannerArrM;
         _tableView.tableHeaderView = _headerView;
         
     } fail:^(NSError *error) {
@@ -89,14 +133,15 @@
 #pragma mark -TableView --row
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //    return self.dataArrM.count;
-    return 10;
+    return self.commonModelArr.count;
 }
 #pragma mark -TableView --cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [UITableViewCell new];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+    CJHomeChildTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:commonID];
+    
+    cell.model = _commonModelArr[indexPath.row];
+    
     return cell;
 }
 
@@ -106,6 +151,13 @@
         _dataArrM = [NSMutableArray array];
     }
     return _dataArrM;
+}
+- (NSMutableArray *)commonModelArr
+{
+    if (_commonModelArr == nil) {
+        _commonModelArr = [NSMutableArray array];
+    }
+    return _commonModelArr;
 }
 
 - (void)didReceiveMemoryWarning {

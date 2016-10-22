@@ -10,7 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CJHomeChildTableHeaderView">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="466"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1j-aD-cOF">
@@ -273,7 +273,7 @@
                     </subviews>
                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="ir5-Cj-v39" secondAttribute="bottom" constant="10" id="M6b-qB-3VP"/>
+                        <constraint firstAttribute="bottom" secondItem="ir5-Cj-v39" secondAttribute="bottom" id="M6b-qB-3VP"/>
                         <constraint firstItem="ir5-Cj-v39" firstAttribute="top" secondItem="iJH-5g-Qiu" secondAttribute="top" constant="10" id="PJn-pJ-ywY"/>
                         <constraint firstItem="ir5-Cj-v39" firstAttribute="leading" secondItem="iJH-5g-Qiu" secondAttribute="leading" id="QC6-8m-zUK"/>
                         <constraint firstAttribute="trailing" secondItem="ir5-Cj-v39" secondAttribute="trailing" id="fFg-xv-cQB"/>
@@ -291,7 +291,7 @@
                 <constraint firstItem="n1j-aD-cOF" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="CWH-bq-OaQ"/>
                 <constraint firstAttribute="trailing" secondItem="iJH-5g-Qiu" secondAttribute="trailing" id="Ffe-FA-j8o"/>
                 <constraint firstAttribute="bottom" secondItem="iJH-5g-Qiu" secondAttribute="bottom" id="JoR-Wv-eXd"/>
-                <constraint firstItem="n1j-aD-cOF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ky8-PJ-t5W"/>
+                <constraint firstItem="n1j-aD-cOF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Jsa-BK-X61"/>
                 <constraint firstItem="wyu-Kt-fTg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LKM-yl-Ccd"/>
                 <constraint firstItem="iJH-5g-Qiu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="i8o-LA-Qdh"/>
                 <constraint firstItem="wyu-Kt-fTg" firstAttribute="top" secondItem="gaY-Nz-hJv" secondAttribute="bottom" id="lXf-JW-Xac"/>

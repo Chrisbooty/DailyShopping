@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "CJBaseViewController.h"
 
-@interface CJHomeChildTableViewController : UIViewController
+@interface CJHomeChildTableViewController : CJBaseViewController
 
 @end

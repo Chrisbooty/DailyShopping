@@ -11,6 +11,12 @@
 		390A118F1DBA416C0079D4DF /* CJHomeChildTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 390A118D1DBA416C0079D4DF /* CJHomeChildTableViewController.xib */; };
 		390D54251DB8E1F200E9D605 /* LXNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 390D54241DB8E1F200E9D605 /* LXNetworking.m */; };
 		390D542B1DB8E64B00E9D605 /* UIView+Convience.m in Sources */ = {isa = PBXBuildFile; fileRef = 390D542A1DB8E64B00E9D605 /* UIView+Convience.m */; };
+		39280C0C1DBB161A00EB5B06 /* CJHomeChildTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39280C0A1DBB161A00EB5B06 /* CJHomeChildTableViewCell.m */; };
+		39280C0D1DBB161A00EB5B06 /* CJHomeChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39280C0B1DBB161A00EB5B06 /* CJHomeChildTableViewCell.xib */; };
+		39280C101DBB2DE400EB5B06 /* CJHomeChildTableCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39280C0F1DBB2DE400EB5B06 /* CJHomeChildTableCellModel.m */; };
+		39280C131DBB36E800EB5B06 /* CJTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 39280C121DBB36E800EB5B06 /* CJTool.m */; };
+		39280C161DBB3C0400EB5B06 /* UITableView+CJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 39280C151DBB3C0400EB5B06 /* UITableView+CJRefresh.m */; };
+		39280C191DBB44D900EB5B06 /* CJTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39280C181DBB44D900EB5B06 /* CJTableView.m */; };
 		398660441DB9AB18008DC367 /* CJImageView+CJGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 398660431DB9AB18008DC367 /* CJImageView+CJGesture.m */; };
 		398660471DB9ADCD008DC367 /* CJImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 398660461DB9ADCD008DC367 /* CJImageView.m */; };
 		39FC52A11DB866B000BFC34E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52A01DB866B000BFC34E /* main.m */; };
@@ -38,8 +44,19 @@
 		390A118D1DBA416C0079D4DF /* CJHomeChildTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJHomeChildTableViewController.xib; sourceTree = "<group>"; };
 		390D54231DB8E1F200E9D605 /* LXNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNetworking.h; sourceTree = "<group>"; };
 		390D54241DB8E1F200E9D605 /* LXNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNetworking.m; sourceTree = "<group>"; };
-		390D54291DB8E64B00E9D605 /* UIView+Convience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Convience.h"; sourceTree = "<group>"; };
-		390D542A1DB8E64B00E9D605 /* UIView+Convience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Convience.m"; sourceTree = "<group>"; };
+		390D54291DB8E64B00E9D605 /* UIView+Convience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Convience.h"; path = "../Tool/UIView+Convience.h"; sourceTree = "<group>"; };
+		390D542A1DB8E64B00E9D605 /* UIView+Convience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Convience.m"; path = "../Tool/UIView+Convience.m"; sourceTree = "<group>"; };
+		39280C091DBB161A00EB5B06 /* CJHomeChildTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHomeChildTableViewCell.h; sourceTree = "<group>"; };
+		39280C0A1DBB161A00EB5B06 /* CJHomeChildTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHomeChildTableViewCell.m; sourceTree = "<group>"; };
+		39280C0B1DBB161A00EB5B06 /* CJHomeChildTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJHomeChildTableViewCell.xib; sourceTree = "<group>"; };
+		39280C0E1DBB2DE400EB5B06 /* CJHomeChildTableCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHomeChildTableCellModel.h; sourceTree = "<group>"; };
+		39280C0F1DBB2DE400EB5B06 /* CJHomeChildTableCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHomeChildTableCellModel.m; sourceTree = "<group>"; };
+		39280C111DBB36E800EB5B06 /* CJTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTool.h; sourceTree = "<group>"; };
+		39280C121DBB36E800EB5B06 /* CJTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTool.m; sourceTree = "<group>"; };
+		39280C141DBB3C0400EB5B06 /* UITableView+CJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CJRefresh.h"; sourceTree = "<group>"; };
+		39280C151DBB3C0400EB5B06 /* UITableView+CJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CJRefresh.m"; sourceTree = "<group>"; };
+		39280C171DBB44D900EB5B06 /* CJTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTableView.h; sourceTree = "<group>"; };
+		39280C181DBB44D900EB5B06 /* CJTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTableView.m; sourceTree = "<group>"; };
 		396F74251DB9DD020002AB42 /* CJURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJURL.h; sourceTree = "<group>"; };
 		398660421DB9AB18008DC367 /* CJImageView+CJGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CJImageView+CJGesture.h"; sourceTree = "<group>"; };
 		398660431DB9AB18008DC367 /* CJImageView+CJGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CJImageView+CJGesture.m"; sourceTree = "<group>"; };
@@ -58,8 +75,8 @@
 		39FC52DE1DB88AD700BFC34E /* CJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHomeViewController.m; sourceTree = "<group>"; };
 		39FC52E01DB88AE700BFC34E /* CJBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseViewController.h; sourceTree = "<group>"; };
 		39FC52E11DB88AE700BFC34E /* CJBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseViewController.m; sourceTree = "<group>"; };
-		39FC52E31DB88BF100BFC34E /* CJLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJLabel.h; sourceTree = "<group>"; };
-		39FC52E41DB88BF100BFC34E /* CJLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJLabel.m; sourceTree = "<group>"; };
+		39FC52E31DB88BF100BFC34E /* CJLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CJLabel.h; path = ../MainClass/Home/FirstController/View/CJLabel.h; sourceTree = "<group>"; };
+		39FC52E41DB88BF100BFC34E /* CJLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CJLabel.m; path = ../MainClass/Home/FirstController/View/CJLabel.m; sourceTree = "<group>"; };
 		39FC52E61DB88C8000BFC34E /* CJHomeChildCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHomeChildCollectionViewController.h; sourceTree = "<group>"; };
 		39FC52E71DB88C8000BFC34E /* CJHomeChildCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHomeChildCollectionViewController.m; sourceTree = "<group>"; };
 		39FC52EB1DB88E8900BFC34E /* CJHomeChildCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHomeChildCollectionCell.h; sourceTree = "<group>"; };
@@ -152,6 +169,10 @@
 				39FC52E11DB88AE700BFC34E /* CJBaseViewController.m */,
 				398660451DB9ADCD008DC367 /* CJImageView.h */,
 				398660461DB9ADCD008DC367 /* CJImageView.m */,
+				39FC52E31DB88BF100BFC34E /* CJLabel.h */,
+				39FC52E41DB88BF100BFC34E /* CJLabel.m */,
+				39280C171DBB44D900EB5B06 /* CJTableView.h */,
+				39280C181DBB44D900EB5B06 /* CJTableView.m */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -161,6 +182,10 @@
 			children = (
 				398660421DB9AB18008DC367 /* CJImageView+CJGesture.h */,
 				398660431DB9AB18008DC367 /* CJImageView+CJGesture.m */,
+				390D54291DB8E64B00E9D605 /* UIView+Convience.h */,
+				390D542A1DB8E64B00E9D605 /* UIView+Convience.m */,
+				39280C141DBB3C0400EB5B06 /* UITableView+CJRefresh.h */,
+				39280C151DBB3C0400EB5B06 /* UITableView+CJRefresh.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -215,8 +240,6 @@
 		39FC52C11DB874BA00BFC34E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				39FC52E31DB88BF100BFC34E /* CJLabel.h */,
-				39FC52E41DB88BF100BFC34E /* CJLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -387,10 +410,10 @@
 		39FC52D71DB874BA00BFC34E /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				390D54291DB8E64B00E9D605 /* UIView+Convience.h */,
-				390D542A1DB8E64B00E9D605 /* UIView+Convience.m */,
 				390D54231DB8E1F200E9D605 /* LXNetworking.h */,
 				390D54241DB8E1F200E9D605 /* LXNetworking.m */,
+				39280C111DBB36E800EB5B06 /* CJTool.h */,
+				39280C121DBB36E800EB5B06 /* CJTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -424,6 +447,8 @@
 				39FC52FB1DB8A3C900BFC34E /* CJHomeCollectionModel.m */,
 				39FC53021DB8BFB300BFC34E /* CJHomeChildTableBannerModel.h */,
 				39FC53031DB8BFB300BFC34E /* CJHomeChildTableBannerModel.m */,
+				39280C0E1DBB2DE400EB5B06 /* CJHomeChildTableCellModel.h */,
+				39280C0F1DBB2DE400EB5B06 /* CJHomeChildTableCellModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -437,6 +462,9 @@
 				39FC52FD1DB8ADF100BFC34E /* CJHomeChildTableHeaderView.h */,
 				39FC52FE1DB8ADF100BFC34E /* CJHomeChildTableHeaderView.m */,
 				39FC53001DB8AE0100BFC34E /* CJHomeChildTableHeaderView.xib */,
+				39280C091DBB161A00EB5B06 /* CJHomeChildTableViewCell.h */,
+				39280C0A1DBB161A00EB5B06 /* CJHomeChildTableViewCell.m */,
+				39280C0B1DBB161A00EB5B06 /* CJHomeChildTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -532,6 +560,7 @@
 			files = (
 				39FC52B21DB866B000BFC34E /* LaunchScreen.storyboard in Resources */,
 				39FC52AF1DB866B000BFC34E /* Assets.xcassets in Resources */,
+				39280C0D1DBB161A00EB5B06 /* CJHomeChildTableViewCell.xib in Resources */,
 				39FC52AA1DB866B000BFC34E /* Main.storyboard in Resources */,
 				39FC52EF1DB88E8900BFC34E /* CJHomeChildCollectionCell.xib in Resources */,
 				390A118F1DBA416C0079D4DF /* CJHomeChildTableViewController.xib in Resources */,
@@ -597,18 +626,23 @@
 				39FC52E21DB88AE700BFC34E /* CJBaseViewController.m in Sources */,
 				39FC52DF1DB88AD700BFC34E /* CJHomeViewController.m in Sources */,
 				390A118E1DBA416C0079D4DF /* CJHomeChildTableViewController.m in Sources */,
+				39280C0C1DBB161A00EB5B06 /* CJHomeChildTableViewCell.m in Sources */,
 				39FC52E91DB88C8000BFC34E /* CJHomeChildCollectionViewController.m in Sources */,
 				398660471DB9ADCD008DC367 /* CJImageView.m in Sources */,
 				390D54251DB8E1F200E9D605 /* LXNetworking.m in Sources */,
 				39FC52AD1DB866B000BFC34E /* DailyShopping.xcdatamodeld in Sources */,
 				39FC52FF1DB8ADF100BFC34E /* CJHomeChildTableHeaderView.m in Sources */,
 				39FC53041DB8BFB300BFC34E /* CJHomeChildTableBannerModel.m in Sources */,
+				39280C161DBB3C0400EB5B06 /* UITableView+CJRefresh.m in Sources */,
 				39FC52EE1DB88E8900BFC34E /* CJHomeChildCollectionCell.m in Sources */,
 				398660441DB9AB18008DC367 /* CJImageView+CJGesture.m in Sources */,
 				39FC52A41DB866B000BFC34E /* AppDelegate.m in Sources */,
 				39FC52A11DB866B000BFC34E /* main.m in Sources */,
 				39FC52FC1DB8A3C900BFC34E /* CJHomeCollectionModel.m in Sources */,
+				39280C101DBB2DE400EB5B06 /* CJHomeChildTableCellModel.m in Sources */,
+				39280C131DBB36E800EB5B06 /* CJTool.m in Sources */,
 				390D542B1DB8E64B00E9D605 /* UIView+Convience.m in Sources */,
+				39280C191DBB44D900EB5B06 /* CJTableView.m in Sources */,
 				39FC52E51DB88BF100BFC34E /* CJLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,6 +22,15 @@
     
     
 }
+- (void)getDefaultPage
+{
+    
+}
+
+- (void)requestCellData
+{
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
