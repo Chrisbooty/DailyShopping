@@ -30,5 +30,11 @@
  @return 转化后价格
  */
 + (NSString *)changeFloat:(NSString *)string;
+/**
+ 计算商品数量
+
+ @param cnt 数量
+ */
++ (NSString *)treatProductCount:(NSInteger)cnt;
 
 @end

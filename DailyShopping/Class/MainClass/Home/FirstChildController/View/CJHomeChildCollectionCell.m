@@ -50,8 +50,8 @@
     [_goodsImageView sd_setImageWithURL:model.thumb_url placeholderImage:[UIImage imageNamed:@"photo"]];
     _goodstitleLabel.text = model.goods_name;
     
-    _goodsGroupLabel.text = [NSString stringWithFormat:@"%ld人团·已团%ld万件",model.customer_num,model.cnt];
-    _goodsPriceLabel.text = [NSString stringWithFormat:@"%ld",model.price];
+    _goodsGroupLabel.text = [NSString stringWithFormat:@"%ld人团·已团%@万件",model.customer_num,[CJTool treatProductCount:model.cnt]];
+    _goodsPriceLabel.text = [NSString stringWithFormat:@"¥%@",[CJTool changeFloat:[NSString stringWithFormat:@"%ld",model.price]]];
 }
 
 @end

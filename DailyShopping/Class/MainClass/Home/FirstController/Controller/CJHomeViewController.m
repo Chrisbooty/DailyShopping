@@ -42,14 +42,6 @@ static NSInteger const childVCNum = 9;
     [self scrollViewDidEndScrollingAnimation:self.controllerScrollView];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    UIViewController *VC = self.childViewControllers.lastObject;
-    VC.view.frame = _controllerScrollView.bounds;
-    
-}
-
 #pragma mark -添加子控制器
 - (void)setUpChildController
 {
@@ -76,9 +68,9 @@ static NSInteger const childVCNum = 9;
 - (void)setupTitle
 {
     // 定义临时变量
-    CGFloat labelW = 100;
+    CGFloat labelW = 80;
     CGFloat labelY = 0;
-    CGFloat labelH = self.titleScrollView.frame.size.height;
+    CGFloat labelH = 42;
     
     // 添加label
     for (NSInteger i = 0; i < childVCNum; i++) {

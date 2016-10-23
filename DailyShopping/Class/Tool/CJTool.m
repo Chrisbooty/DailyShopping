@@ -25,16 +25,6 @@ static CJTool *tool;
 #pragma mark -设置label删除线
 + (void)setRichTextWithLabel:(UILabel *)label withText:(NSString *)str
 {
-    //    NSAttributedString *attrStr =
-    //    [[NSAttributedString alloc]initWithString:str
-    //                                  attributes:
-    //字体大小
-    //  @{NSFontAttributeName:[UIFont systemFontOfSize:20.f],
-    //颜色
-    //    NSForegroundColorAttributeName:[UIColor lightGrayColor],
-    //    NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle|NSUnderlinePatternSolid),
-    //    NSStrikethroughColorAttributeName:[UIColor lightGrayColor]}];
-    
     NSAttributedString *attrStr =
     [[NSAttributedString alloc]initWithString:str
                                    attributes:
@@ -71,4 +61,11 @@ static CJTool *tool;
     }
     return returnString;
 }
+#pragma mark -计算商品数量
++ (NSString *)treatProductCount:(NSInteger)cnt
+{
+    if (cnt < 10000) return [NSString stringWithFormat:@"%ld",cnt];
+    return [CJTool changeFloat:[NSString stringWithFormat:@"%ld",cnt /1000 * 10]];
+}
+
 @end

@@ -10,9 +10,9 @@
 
 @implementation CJLabel
 
-static const CGFloat CJRed = 0.4;
-static const CGFloat CJGreen = 0.6;
-static const CGFloat CJBlue = 0.7;
+static const CGFloat CJRed = 0;
+static const CGFloat CJGreen = 0;
+static const CGFloat CJBlue = 0;
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
