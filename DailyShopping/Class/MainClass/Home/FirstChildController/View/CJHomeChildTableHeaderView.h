@@ -14,5 +14,7 @@
 
 /** model - CJHomeChildTableBannerModel */
 @property (nonatomic, strong) NSArray<CJHomeChildTableBannerModel *> *bannerModelArr;
+@property (weak, nonatomic) IBOutlet UIView *classView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *ClassViewHeightLayout;
 
 @end

@@ -54,17 +54,51 @@ static NSString * const commonID = @"CJHomeChildTableViewCell";
     _tableView.estimatedRowHeight = 300;
     
     [self requestCellData];
+    [self createBannerView];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
 }
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    
+}
+
 #pragma mark -获取默认page值
 - (void)getDefaultPage
 {
     self.page = 1;
 }
-
-- (void)viewWillAppear:(BOOL)animated
+#pragma mark -创建banner并获取数据
+- (void)createBannerView
 {
-    [self createBannerView];
+    //获取轮播图数据
+    [LXNetworking getWithUrl:CJHomeCarouselURL params:nil success:^(id response) {
+        
+        NSArray *arr = response;
+        NSMutableArray *bannerArrM = [NSMutableArray array];
+        for (NSDictionary *dict in arr) {
+            @autoreleasepool {
+                CJHomeChildTableBannerModel *model = [CJHomeChildTableBannerModel yy_modelWithJSON:dict];
+                if (model) {
+                    [bannerArrM addObject:model];
+                }
+            }
+        }
+        //设置headerView
+        _headerView = [[[NSBundle mainBundle] loadNibNamed:@"CJHomeChildTableHeaderView" owner:nil options:nil] lastObject];
+        _headerView.bannerModelArr = bannerArrM;
+        _tableView.tableHeaderView = _headerView;
+        
+    } fail:^(NSError *error) {
+        NSLog(@"---+++ %@",error);
+    } showHUD:YES andController:self];
 }
 #pragma mark -tableView 获取数据
 - (void)requestCellData
@@ -85,6 +119,7 @@ static NSString * const commonID = @"CJHomeChildTableViewCell";
         [weakSelf.tableView reloadData];
         [weakSelf endRefreshing];
     } fail:^(NSError *error) {
+        NSLog(@"-=-=-=-=-=%@",error);
         [weakSelf endRefreshing];
     } showHUD:NO andController:self];
 }
@@ -94,35 +129,7 @@ static NSString * const commonID = @"CJHomeChildTableViewCell";
     [weakSelf.tableView.mj_header endRefreshing];
     [weakSelf.tableView.mj_footer endRefreshing];
 }
-#pragma mark -创建banner并获取数据
-- (void)createBannerView
-{
-    //设置headerView
-    _headerView = [[[NSBundle mainBundle] loadNibNamed:@"CJHomeChildTableHeaderView" owner:nil options:nil] lastObject];
-    _tableView.tableHeaderView = _headerView;
-    
-    //获取轮播图数据
-    [LXNetworking getWithUrl:CJHomeCarouselURL params:nil success:^(id response) {
-        
-        NSArray *arr = response;
-        NSMutableArray *bannerArrM = [NSMutableArray array];
-        for (NSDictionary *dict in arr) {
-            @autoreleasepool {
-                CJHomeChildTableBannerModel *model = [CJHomeChildTableBannerModel yy_modelWithJSON:dict];
-                if (model) {
-                    [bannerArrM addObject:model];
-                }
-            }
-        }
-        _headerView = [[[NSBundle mainBundle] loadNibNamed:@"CJHomeChildTableHeaderView" owner:nil options:nil] lastObject];
-        
-        _headerView.bannerModelArr = bannerArrM;
-        _tableView.tableHeaderView = _headerView;
-        
-    } fail:^(NSError *error) {
-        NSLog(@"---+++ %@",error);
-    } showHUD:YES andController:self];
-}
+
 
 #pragma mark - TableView dataSource function
 #pragma mark -TableView --section

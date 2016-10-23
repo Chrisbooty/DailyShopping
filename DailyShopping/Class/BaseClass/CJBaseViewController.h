@@ -10,7 +10,10 @@
 #import "CJURL.h"
 
 @interface CJBaseViewController : UIViewController
-
+{
+    NSInteger _page;
+    
+}
 /**
  网络请求page - 默认1
  */

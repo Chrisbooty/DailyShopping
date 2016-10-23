@@ -26,7 +26,7 @@
 /**
  去掉价格或者其他数字小数点后面多余的0
  
- @param stringFloat 转化前价格
+ @param string 转化前价格
  @return 转化后价格
  */
 + (NSString *)changeFloat:(NSString *)string;

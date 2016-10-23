@@ -11,4 +11,9 @@
 
 @implementation CJHomeCollectionModel
 
++ (nullable NSDictionary<NSString *, id> *)modelCustomPropertyMapper
+{
+    return @{@"customer_num":@"group.customer_num",@"price":@"group.price"};
+}
+
 @end

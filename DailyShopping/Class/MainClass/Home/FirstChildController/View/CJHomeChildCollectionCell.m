@@ -7,6 +7,8 @@
 //
 
 #import "CJHomeChildCollectionCell.h"
+#import <UIImageView+WebCache.h>
+#import "CJTool.h"
 
 @interface CJHomeChildCollectionCell ()
 
@@ -45,6 +47,11 @@
 {
     _model = model;
     
+    [_goodsImageView sd_setImageWithURL:model.thumb_url placeholderImage:[UIImage imageNamed:@"photo"]];
+    _goodstitleLabel.text = model.goods_name;
+    
+    _goodsGroupLabel.text = [NSString stringWithFormat:@"%ld人团·已团%ld万件",model.customer_num,model.cnt];
+    _goodsPriceLabel.text = [NSString stringWithFormat:@"%ld",model.price];
 }
 
 @end

@@ -8,7 +8,9 @@
 
 #import "CJHomeChildTableHeaderView.h"
 #import "CJImageView+CJGesture.h"
-
+#import "LXNetworking.h"
+#import <YYModel/YYModel.h>
+#import "CJURL.h"
 @interface CJHomeChildTableHeaderView () <UIScrollViewDelegate>
 
 /**
@@ -19,12 +21,12 @@
  页数控制
  */
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
-/** 
- 计时器 
+/**
+ 计时器
  */
 @property (nonatomic, strong) NSTimer *timer;
-/** 
- 轮播图位置索引 
+/**
+ 轮播图位置索引
  */
 @property (nonatomic, assign) NSInteger index;
 
@@ -44,6 +46,31 @@ static CGFloat bannerViewHeight = 0;
 
 @implementation CJHomeChildTableHeaderView
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+//    //获取轮播图数据
+//    [LXNetworking getWithUrl:CJHomeCarouselURL params:nil success:^(id response) {
+//        
+//        NSArray *arr = response;
+//        NSMutableArray *bannerArrM = [NSMutableArray array];
+//        for (NSDictionary *dict in arr) {
+//            @autoreleasepool {
+//                CJHomeChildTableBannerModel *model = [CJHomeChildTableBannerModel yy_modelWithJSON:dict];
+//                if (model) {
+//                    [bannerArrM addObject:model];
+//                }
+//            }
+//        }
+//        
+//        self.bannerModelArr = bannerArrM;
+//        
+//    } fail:^(NSError *error) {
+//        NSLog(@"---+++ %@",error);
+//    } showHUD:YES andController:nil];
+}
+
 #pragma mark -加载轮播图
 - (void)setBannerModelArr:(NSArray *)bannerModelArr
 {
@@ -55,14 +82,9 @@ static CGFloat bannerViewHeight = 0;
     //设置pagecontrol
     _pageControl.numberOfPages = bannerModelArr.count;
     //获取轮播图高度
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-//        bannerViewHeight = _bannerView.frame.size.height;
-        
-        //轮播图宽高比 3:8
-        CGFloat bannerScale = 3/8.0;
-        bannerViewHeight = CWidth * bannerScale;
-    });
+    //轮播图宽高比 3:8
+    CGFloat bannerScale = 3/8.0;
+    bannerViewHeight = CWidth * bannerScale;
     //如果数据为空
     if (bannerModelArr.count == 0) {
         UIImageView * img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CWidth, bannerViewHeight)];
@@ -88,6 +110,7 @@ static CGFloat bannerViewHeight = 0;
     _bannerView.delegate = self;
     _index = 1;
     [self addMyTimer];
+    
 }
 #pragma mark -创建轮播图片
 - (void)setUpImageWithIndex:(NSInteger)i withValue:(BannerImageStatus)status
@@ -145,7 +168,7 @@ static CGFloat bannerViewHeight = 0;
         _pageControl.currentPage = 0;
         [scrollView setContentOffset:CGPointMake(CWidth, 0) animated:NO];
         
-    //scrollView滚动到最后一张
+        //scrollView滚动到最后一张
     }else if (scrollView.contentOffset.x == 0)
     {
         [scrollView setContentOffset:CGPointMake(CWidth * _bannerModelArr.count, 0) animated:NO];
@@ -182,13 +205,21 @@ static CGFloat bannerViewHeight = 0;
         
     }
     [_bannerView setContentOffset:CGPointMake(_index * CWidth, 0) animated:YES];
-//    _pageControl.currentPage = _index - 2;
+    //    _pageControl.currentPage = _index - 2;
 }
 
 #pragma mark -轮播图点击事件
 - (void)bannerImageClick:(UITapGestureRecognizer *)tap
 {
     CJImageView *img = (CJImageView *)tap.view;
+}
+
+- (void)dealloc
+{
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
 }
 
 @end

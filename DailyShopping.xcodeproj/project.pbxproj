@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3904C8FC1DBCC5AB00209B5B /* CJCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3904C8FB1DBCC5AB00209B5B /* CJCollectionView.m */; };
 		390A118E1DBA416C0079D4DF /* CJHomeChildTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 390A118C1DBA416C0079D4DF /* CJHomeChildTableViewController.m */; };
 		390A118F1DBA416C0079D4DF /* CJHomeChildTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 390A118D1DBA416C0079D4DF /* CJHomeChildTableViewController.xib */; };
 		390D54251DB8E1F200E9D605 /* LXNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 390D54241DB8E1F200E9D605 /* LXNetworking.m */; };
@@ -39,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3904C8FA1DBCC5AB00209B5B /* CJCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionView.h; sourceTree = "<group>"; };
+		3904C8FB1DBCC5AB00209B5B /* CJCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCollectionView.m; sourceTree = "<group>"; };
 		390A118B1DBA416C0079D4DF /* CJHomeChildTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHomeChildTableViewController.h; sourceTree = "<group>"; };
 		390A118C1DBA416C0079D4DF /* CJHomeChildTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHomeChildTableViewController.m; sourceTree = "<group>"; };
 		390A118D1DBA416C0079D4DF /* CJHomeChildTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJHomeChildTableViewController.xib; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				39FC52E41DB88BF100BFC34E /* CJLabel.m */,
 				39280C171DBB44D900EB5B06 /* CJTableView.h */,
 				39280C181DBB44D900EB5B06 /* CJTableView.m */,
+				3904C8FA1DBCC5AB00209B5B /* CJCollectionView.h */,
+				3904C8FB1DBCC5AB00209B5B /* CJCollectionView.m */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -628,6 +633,7 @@
 				390A118E1DBA416C0079D4DF /* CJHomeChildTableViewController.m in Sources */,
 				39280C0C1DBB161A00EB5B06 /* CJHomeChildTableViewCell.m in Sources */,
 				39FC52E91DB88C8000BFC34E /* CJHomeChildCollectionViewController.m in Sources */,
+				3904C8FC1DBCC5AB00209B5B /* CJCollectionView.m in Sources */,
 				398660471DB9ADCD008DC367 /* CJImageView.m in Sources */,
 				390D54251DB8E1F200E9D605 /* LXNetworking.m in Sources */,
 				39FC52AD1DB866B000BFC34E /* DailyShopping.xcdatamodeld in Sources */,

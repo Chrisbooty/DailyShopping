@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CJBaseViewController.h"
 #import "CJHomeChildTableHeaderView.h"
-@interface CJHomeChildCollectionViewController : UIViewController
+@interface CJHomeChildCollectionViewController : CJBaseViewController
+
+/**
+ URL
+ */
+@property (nonatomic, copy) NSString *URL;
 
 @end

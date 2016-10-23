@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <MJRefresh.h>
+#import "CJURL.h"
 
 typedef enum{
     
