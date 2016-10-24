@@ -85,5 +85,15 @@ static CJTool *tool;
         });
     }
 }
-
+#pragma mark - 设置Tabbar
++ (void)setTabbarWithController:(UIViewController *)controller withImageName:(NSString *)imageName withTitle:(NSString *)title
+{
+    //自定义tabbar
+    controller.tabBarItem.imageInsets = UIEdgeInsetsMake(3, 3, 3, 3);
+    controller.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -4);
+    controller.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@-hl",imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    controller.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    controller.title = title;
+    controller.tabBarController.tabBar.tintColor = [UIColor colorWithRed: 252/255.0 green: 44/255.0 blue: 71 /255.0 alpha:1];
+}
 @end

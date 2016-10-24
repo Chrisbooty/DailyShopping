@@ -12,9 +12,9 @@
 #import "CJCollectionView.h"
 #import "UIView+Convience.h"
 
-
+//cell 重用ID
 static NSString * const ID = @"CJHomeChildCollectionCell";
-
+//collectionView 列数
 static CGFloat const column = 2;
 
 @interface CJHomeChildCollectionViewController () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
@@ -54,8 +54,9 @@ static CGFloat const column = 2;
     UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
     flowLayout.minimumLineSpacing = 1;
     flowLayout.minimumInteritemSpacing = 1;
-    CGFloat itemW = (CWidth-1) / column;
-    CGFloat itemH = itemW + 100;
+    CGFloat itemW = (CWidth - 1) / column;
+    //图片底部的高为80
+    CGFloat itemH = itemW + 80;
     flowLayout.itemSize = CGSizeMake(itemW , itemH);
     //创建collectionView
     _collectionView = [[CJCollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];

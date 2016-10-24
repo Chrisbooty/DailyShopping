@@ -43,5 +43,13 @@
  @param controller 控制器
  */
 + (void)showMsg:(NSString *)msg withController:(UIViewController *)controller;
+/**
+ 设置Tabbar
+
+ @param controller 控制器
+ @param imageName  图标名
+ @param title      显示文字
+ */
++ (void)setTabbarWithController:(UIViewController *)controller withImageName:(NSString *)imageName withTitle:(NSString *)title;
 
 @end

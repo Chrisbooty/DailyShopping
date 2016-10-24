@@ -7,6 +7,7 @@
 //
 
 #import "CJHomeViewController.h"
+#import "CJTool.h"
 #import "CJLabel.h"
 #import "CJHomeChildTableViewController.h"
 #import "CJHomeChildCollectionViewController.h"
@@ -27,12 +28,18 @@
 
 static NSInteger const childVCNum = 9;
 
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    [CJTool setTabbarWithController:self withImageName:@"home" withTitle:@"首页"];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
 //    _controllerScrollView.contentSize = CGSizeMake(CWidth +20, 0);
-    
     
     
     [self setUpChildController];
@@ -74,7 +81,7 @@ static NSInteger const childVCNum = 9;
     //titleScrollView的宽度
     CGFloat titleW = 0;
     //label间隔
-    CGFloat labelSpacing = 10;
+    CGFloat labelSpacing = 20;
     // 添加label
     for (NSInteger i = 0; i < childVCNum; i++) {
         CJLabel *label = [[CJLabel alloc] init];
@@ -150,10 +157,6 @@ static NSInteger const childVCNum = 9;
     // 取出需要显示的控制器
     UIViewController *willShowVc = self.childViewControllers[index];
     
-//    UIViewController *nextShowVc;
-//    if (index != childVCNum - 1) {
-//        nextShowVc = self.childViewControllers[index +1];
-//    }
     
     // 如果当前位置的位置已经显示过了，就直接返回
     if ([willShowVc isViewLoaded]) return;
@@ -163,11 +166,6 @@ static NSInteger const childVCNum = 9;
         willShowVc.view.frame = CGRectMake(offsetX, 0, width, height);
         [scrollView addSubview:willShowVc.view];
     }
-//    if (![nextShowVc isViewLoaded]) {
-//        nextShowVc.view.frame = CGRectMake(offsetX + CWidth, 0, width, height);
-//        [nextShowVc viewDidLoad];
-//        [scrollView addSubview:willShowVc.view];
-//    }
 }
 
 /**
@@ -202,6 +200,8 @@ static NSInteger const childVCNum = 9;
     // 设置label的比例
     leftLabel.scale = leftScale;
     rightLabel.scale = rightScale;
+    
+
 }
 
 
