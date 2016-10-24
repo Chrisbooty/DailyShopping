@@ -10,6 +10,7 @@
 #import "LXNetworking.h"
 #import "CJHomeChildCollectionCell.h"
 #import "CJCollectionView.h"
+#import "UIView+Convience.h"
 
 
 static NSString * const ID = @"CJHomeChildCollectionCell";
@@ -35,10 +36,20 @@ static CGFloat const column = 2;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    
-    
     _page = 0;
+    [self.view showLoading];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self loadCollectionView];
+}
+#pragma mark - 加载collectionView
+- (void)loadCollectionView
+{
     //创建FlowLayout
     UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
     flowLayout.minimumLineSpacing = 1;
@@ -50,17 +61,19 @@ static CGFloat const column = 2;
     _collectionView = [[CJCollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
-    
+    //设置上下拉刷新
     [_collectionView setCollectionViewRefreshWithController:self];
     
     [self.view addSubview:_collectionView];
     
     //注册cell
     [_collectionView registerNib:[UINib nibWithNibName:@"CJHomeChildCollectionCell" bundle:nil] forCellWithReuseIdentifier:ID];
+    //调整contentInset，使内容不被Tabbar遮住
+    _collectionView.contentInset = UIEdgeInsetsMake(0, 0, 49, 0);
     
     [self requestCellData];
 }
-
+#pragma mark -collectionView网络请求
 - (void)requestCellData
 {
     CJWeakSelf
@@ -77,10 +90,14 @@ static CGFloat const column = 2;
             }
         }
         [weakSelf.collectionView reloadData];
+        
         [weakSelf endRefreshing];
+        [weakSelf.view hideLoading];
     } fail:^(NSError *error) {
         NSLog(@"-=-=-=-=-=%@",error);
+        
         [weakSelf endRefreshing];
+        [weakSelf.view hideLoading];
     } showHUD:NO andController:self];
 }
 #pragma mark -结束刷新

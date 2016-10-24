@@ -40,7 +40,7 @@ static const CGFloat CJBlue = 0;
     self.textColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
     
     // 大小缩放比例
-    CGFloat transformScale = 1 + scale * 0.3; // [1, 1.3]
+    CGFloat transformScale = 1 + scale * 0.2; // [1, 1.3]
     self.transform = CGAffineTransformMakeScale(transformScale, transformScale);
 }
 

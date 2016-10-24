@@ -8,6 +8,8 @@
 
 #import "CJBaseViewController.h"
 #import "LXNetworking.h"
+#import "CJTool.h"
+#import <MBProgressHUD.h>
 
 @interface CJBaseViewController ()
 
@@ -20,8 +22,8 @@
     // Do any additional setup after loading the view.
     
     
-    
 }
+
 - (void)getDefaultPage
 {
     

@@ -36,5 +36,12 @@
  @param cnt 数量
  */
 + (NSString *)treatProductCount:(NSInteger)cnt;
+/**
+ 数据请求动画
+
+ @param msg        显示的文本
+ @param controller 控制器
+ */
++ (void)showMsg:(NSString *)msg withController:(UIViewController *)controller;
 
 @end

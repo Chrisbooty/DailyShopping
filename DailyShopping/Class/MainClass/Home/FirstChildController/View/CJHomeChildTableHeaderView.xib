@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -293,13 +292,13 @@
                 <constraint firstAttribute="bottom" secondItem="iJH-5g-Qiu" secondAttribute="bottom" id="8vO-pV-qVy"/>
                 <constraint firstItem="gaY-Nz-hJv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="C0R-lz-66w"/>
                 <constraint firstItem="n1j-aD-cOF" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="CWH-bq-OaQ"/>
+                <constraint firstItem="n1j-aD-cOF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Jhh-Yz-jUM"/>
                 <constraint firstItem="iJH-5g-Qiu" firstAttribute="top" secondItem="bab-U3-L0w" secondAttribute="bottom" id="LwC-f8-Uuc"/>
                 <constraint firstAttribute="trailing" secondItem="iJH-5g-Qiu" secondAttribute="trailing" id="N7u-XP-OUR"/>
                 <constraint firstItem="bab-U3-L0w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SbF-h4-n7E"/>
                 <constraint firstItem="bab-U3-L0w" firstAttribute="top" secondItem="gaY-Nz-hJv" secondAttribute="bottom" id="Wd6-v6-Nqb"/>
                 <constraint firstAttribute="trailing" secondItem="bab-U3-L0w" secondAttribute="trailing" id="XFl-1w-vSd"/>
                 <constraint firstItem="iJH-5g-Qiu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="isu-Az-AGi"/>
-                <constraint firstItem="n1j-aD-cOF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jxH-bQ-Boc"/>
                 <constraint firstItem="gaY-Nz-hJv" firstAttribute="bottom" secondItem="n1j-aD-cOF" secondAttribute="bottom" id="mff-5e-rnf"/>
                 <constraint firstAttribute="trailing" secondItem="n1j-aD-cOF" secondAttribute="trailing" id="w5X-Ou-dpw"/>
             </constraints>

@@ -68,16 +68,26 @@ static NSInteger const childVCNum = 9;
 - (void)setupTitle
 {
     // 定义临时变量
-    CGFloat labelW = 80;
+    CGFloat labelW = 0;
     CGFloat labelY = 0;
     CGFloat labelH = 42;
-    
+    //titleScrollView的宽度
+    CGFloat titleW = 0;
+    //label间隔
+    CGFloat labelSpacing = 10;
     // 添加label
     for (NSInteger i = 0; i < childVCNum; i++) {
         CJLabel *label = [[CJLabel alloc] init];
+        //计算宽度
+        labelW = [[self.childViewControllers[i] title] boundingRectWithSize:CGSizeMake(100, MAXFLOAT) options:NSStringDrawingTruncatesLastVisibleLine attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size.width;
+        
         label.text = [self.childViewControllers[i] title];
-        CGFloat labelX = i * labelW;
-        label.frame = CGRectMake(labelX, labelY, labelW, labelH);
+        
+        CGFloat labelX = titleW;
+        
+        titleW = labelSpacing + labelW + titleW;
+        
+        label.frame = CGRectMake(labelX + labelSpacing, labelY, labelW, labelH);
         [label addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelClick:)]];
         label.tag = i;
         [self.titleScrollView addSubview:label];
@@ -88,7 +98,7 @@ static NSInteger const childVCNum = 9;
     }
     
     // 设置contentSize
-    self.titleScrollView.contentSize = CGSizeMake(childVCNum * labelW, 0);
+    self.titleScrollView.contentSize = CGSizeMake(titleW + labelSpacing, 0);
     self.controllerScrollView.contentSize = CGSizeMake(childVCNum * [UIScreen mainScreen].bounds.size.width, 0);
 }
 
@@ -140,12 +150,24 @@ static NSInteger const childVCNum = 9;
     // 取出需要显示的控制器
     UIViewController *willShowVc = self.childViewControllers[index];
     
+//    UIViewController *nextShowVc;
+//    if (index != childVCNum - 1) {
+//        nextShowVc = self.childViewControllers[index +1];
+//    }
+    
     // 如果当前位置的位置已经显示过了，就直接返回
     if ([willShowVc isViewLoaded]) return;
     
-    // 添加控制器的view到contentScrollView中;
-    willShowVc.view.frame = CGRectMake(offsetX, 0, width, height);
-    [scrollView addSubview:willShowVc.view];
+    if (![willShowVc isViewLoaded]) {
+        // 添加控制器的view到contentScrollView中;
+        willShowVc.view.frame = CGRectMake(offsetX, 0, width, height);
+        [scrollView addSubview:willShowVc.view];
+    }
+//    if (![nextShowVc isViewLoaded]) {
+//        nextShowVc.view.frame = CGRectMake(offsetX + CWidth, 0, width, height);
+//        [nextShowVc viewDidLoad];
+//        [scrollView addSubview:willShowVc.view];
+//    }
 }
 
 /**

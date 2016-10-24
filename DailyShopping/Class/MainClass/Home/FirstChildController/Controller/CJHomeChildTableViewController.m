@@ -78,6 +78,8 @@ static NSString * const commonID = @"CJHomeChildTableViewCell";
 #pragma mark -创建banner并获取数据
 - (void)createBannerView
 {
+    
+    
     //获取轮播图数据
     [LXNetworking getWithUrl:CJHomeCarouselURL params:nil success:^(id response) {
         
@@ -94,6 +96,9 @@ static NSString * const commonID = @"CJHomeChildTableViewCell";
         //设置headerView
         _headerView = [[[NSBundle mainBundle] loadNibNamed:@"CJHomeChildTableHeaderView" owner:nil options:nil] lastObject];
         _headerView.bannerModelArr = bannerArrM;
+        CGRect tempRect = _headerView.frame;
+        tempRect.size.height = CWidth * 17/24 + 160;
+        _headerView.frame = tempRect;
         _tableView.tableHeaderView = _headerView;
         
     } fail:^(NSError *error) {

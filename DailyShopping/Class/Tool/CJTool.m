@@ -7,6 +7,7 @@
 //
 
 #import "CJTool.h"
+#import <MBProgressHUD.h>
 
 @implementation CJTool
 
@@ -66,6 +67,23 @@ static CJTool *tool;
 {
     if (cnt < 10000) return [NSString stringWithFormat:@"%ld",cnt];
     return [CJTool changeFloat:[NSString stringWithFormat:@"%ld",cnt /1000 * 10]];
+}
+#pragma mark -显示加载中
++ (void)showMsg:(NSString *)msg withController:(UIViewController *)controller
+{
+    //    NSLog(@"%@,%s",msg,__func__);
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:controller.view];
+    [hud hideAnimated:YES];
+    [hud removeFromSuperViewOnHide];
+    if (msg.length > 0) {
+        
+        hud.mode = MBProgressHUDModeText;
+        hud.label.text = msg;
+        [controller.view addSubview:hud];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [hud removeFromSuperViewOnHide];
+        });
+    }
 }
 
 @end
