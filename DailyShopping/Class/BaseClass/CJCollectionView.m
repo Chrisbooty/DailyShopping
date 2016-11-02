@@ -38,7 +38,7 @@
 }
 */
 #pragma mark -设置上下拉刷新
-- (void)setCollectionViewRefreshWithController:(CJBaseViewController *)controller
+- (void)setCollectionViewRefreshWithController:(CJBaseViewController *)controller isPage:(BOOL)isPage
 {
     //设置上拉刷新
     __weak CJBaseViewController *weakSelf = controller;
@@ -48,9 +48,12 @@
         [weakSelf requestCellData];
     }];
     self.mj_header = header;
+    
     //设置下拉刷新
+    NSInteger num = isPage ? 1:50;
+    
     MJRefreshFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        weakSelf.page = weakSelf.page + 50;
+        weakSelf.page = weakSelf.page + num;
         weakSelf.upRefresh = NO;
         [weakSelf requestCellData];
     }];

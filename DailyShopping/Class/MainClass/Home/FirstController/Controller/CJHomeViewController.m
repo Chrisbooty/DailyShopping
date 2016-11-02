@@ -33,6 +33,9 @@ static NSInteger const childVCNum = 9;
 {
     [super awakeFromNib];
     [CJTool setTabbarWithController:self withImageName:@"home" withTitle:@"首页"];
+    
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"home_nav_bg"] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)viewDidLoad {

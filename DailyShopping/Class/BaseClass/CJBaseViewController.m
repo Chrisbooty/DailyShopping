@@ -8,7 +8,7 @@
 
 #import "CJBaseViewController.h"
 #import "LXNetworking.h"
-#import "CJTool.h"
+
 #import <MBProgressHUD.h>
 
 @interface CJBaseViewController ()

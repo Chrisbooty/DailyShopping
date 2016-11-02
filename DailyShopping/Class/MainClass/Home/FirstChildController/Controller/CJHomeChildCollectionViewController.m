@@ -7,26 +7,15 @@
 //
 
 #import "CJHomeChildCollectionViewController.h"
-#import "LXNetworking.h"
 #import "CJHomeChildCollectionCell.h"
-#import "CJCollectionView.h"
-#import "UIView+Convience.h"
+
 
 //cell 重用ID
 static NSString * const ID = @"CJHomeChildCollectionCell";
 //collectionView 列数
 static CGFloat const column = 2;
 
-@interface CJHomeChildCollectionViewController () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
-
-/**
- collectionView
- */
-@property (strong, nonatomic) CJCollectionView *collectionView;
-/** 
- collectionView数据源 
- */
-@property (nonatomic, strong) NSMutableArray *dataArrM;
+@interface CJHomeChildCollectionViewController () <UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @end
 
@@ -39,6 +28,7 @@ static CGFloat const column = 2;
     _page = 0;
     [self.view showLoading];
     
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -46,34 +36,41 @@ static CGFloat const column = 2;
     [super viewWillAppear:animated];
     
     [self loadCollectionView];
+    
+    [self setCollectionRefresh];
 }
 #pragma mark - 加载collectionView
 - (void)loadCollectionView
 {
     //创建FlowLayout
-    UICollectionViewFlowLayout *flowLayout = [UICollectionViewFlowLayout new];
-    flowLayout.minimumLineSpacing = 1;
-    flowLayout.minimumInteritemSpacing = 1;
+    _flowLayout = [UICollectionViewFlowLayout new];
+    _flowLayout.minimumLineSpacing = 1;
+    _flowLayout.minimumInteritemSpacing = 1;
     CGFloat itemW = (CWidth - 1) / column;
     //图片底部的高为80
     CGFloat itemH = itemW + 80;
-    flowLayout.itemSize = CGSizeMake(itemW , itemH);
+    _flowLayout.itemSize = CGSizeMake(itemW , itemH);
     //创建collectionView
-    _collectionView = [[CJCollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+    _collectionView = [[CJCollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:_flowLayout];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
-    //设置上下拉刷新
-    [_collectionView setCollectionViewRefreshWithController:self];
     
     [self.view addSubview:_collectionView];
     
     //注册cell
-    [_collectionView registerNib:[UINib nibWithNibName:@"CJHomeChildCollectionCell" bundle:nil] forCellWithReuseIdentifier:ID];
+    [_collectionView registerNib:[UINib nibWithNibName:ID bundle:nil] forCellWithReuseIdentifier:ID];
     //调整contentInset，使内容不被Tabbar遮住
     _collectionView.contentInset = UIEdgeInsetsMake(0, 0, 49, 0);
     
     [self requestCellData];
 }
+#pragma mark -设置上下拉刷新及网络字段
+- (void)setCollectionRefresh
+{
+    //设置上下拉刷新
+    [_collectionView setCollectionViewRefreshWithController:self isPage:NO];
+}
+
 #pragma mark -collectionView网络请求
 - (void)requestCellData
 {
@@ -136,6 +133,7 @@ static CGFloat const column = 2;
     }
     return _dataArrM;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

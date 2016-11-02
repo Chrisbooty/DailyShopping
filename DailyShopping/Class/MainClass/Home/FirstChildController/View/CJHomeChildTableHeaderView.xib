@@ -9,7 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CJHomeChildTableHeaderView">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="427"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="427.5"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1j-aD-cOF">
@@ -292,7 +292,6 @@
                 <constraint firstAttribute="bottom" secondItem="iJH-5g-Qiu" secondAttribute="bottom" id="8vO-pV-qVy"/>
                 <constraint firstItem="gaY-Nz-hJv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="C0R-lz-66w"/>
                 <constraint firstItem="n1j-aD-cOF" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="CWH-bq-OaQ"/>
-                <constraint firstItem="n1j-aD-cOF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Jhh-Yz-jUM"/>
                 <constraint firstItem="iJH-5g-Qiu" firstAttribute="top" secondItem="bab-U3-L0w" secondAttribute="bottom" id="LwC-f8-Uuc"/>
                 <constraint firstAttribute="trailing" secondItem="iJH-5g-Qiu" secondAttribute="trailing" id="N7u-XP-OUR"/>
                 <constraint firstItem="bab-U3-L0w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SbF-h4-n7E"/>
@@ -300,6 +299,7 @@
                 <constraint firstAttribute="trailing" secondItem="bab-U3-L0w" secondAttribute="trailing" id="XFl-1w-vSd"/>
                 <constraint firstItem="iJH-5g-Qiu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="isu-Az-AGi"/>
                 <constraint firstItem="gaY-Nz-hJv" firstAttribute="bottom" secondItem="n1j-aD-cOF" secondAttribute="bottom" id="mff-5e-rnf"/>
+                <constraint firstItem="n1j-aD-cOF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nJi-HM-Nk9"/>
                 <constraint firstAttribute="trailing" secondItem="n1j-aD-cOF" secondAttribute="trailing" id="w5X-Ou-dpw"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

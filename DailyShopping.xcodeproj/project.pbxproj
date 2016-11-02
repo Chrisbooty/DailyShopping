@@ -10,8 +10,12 @@
 		3904C8FC1DBCC5AB00209B5B /* CJCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3904C8FB1DBCC5AB00209B5B /* CJCollectionView.m */; };
 		390A118E1DBA416C0079D4DF /* CJHomeChildTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 390A118C1DBA416C0079D4DF /* CJHomeChildTableViewController.m */; };
 		390A118F1DBA416C0079D4DF /* CJHomeChildTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 390A118D1DBA416C0079D4DF /* CJHomeChildTableViewController.xib */; };
+		390CBCC81DBE3BAD001600AE /* CJNewCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 390CBCC61DBE3BAD001600AE /* CJNewCollectionHeaderView.m */; };
+		390CBCC91DBE3BAD001600AE /* CJNewCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 390CBCC71DBE3BAD001600AE /* CJNewCollectionHeaderView.xib */; };
 		390D54251DB8E1F200E9D605 /* LXNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 390D54241DB8E1F200E9D605 /* LXNetworking.m */; };
 		390D542B1DB8E64B00E9D605 /* UIView+Convience.m in Sources */ = {isa = PBXBuildFile; fileRef = 390D542A1DB8E64B00E9D605 /* UIView+Convience.m */; };
+		390DCD571DCA2B3A008DE30A /* CJNewProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 390DCD561DCA2B3A008DE30A /* CJNewProductViewController.m */; };
+		390DCD5A1DCA417D008DE30A /* UIImage+CJScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 390DCD591DCA417D008DE30A /* UIImage+CJScale.m */; };
 		39280C0C1DBB161A00EB5B06 /* CJHomeChildTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39280C0A1DBB161A00EB5B06 /* CJHomeChildTableViewCell.m */; };
 		39280C0D1DBB161A00EB5B06 /* CJHomeChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39280C0B1DBB161A00EB5B06 /* CJHomeChildTableViewCell.xib */; };
 		39280C101DBB2DE400EB5B06 /* CJHomeChildTableCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39280C0F1DBB2DE400EB5B06 /* CJHomeChildTableCellModel.m */; };
@@ -45,10 +49,17 @@
 		390A118B1DBA416C0079D4DF /* CJHomeChildTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHomeChildTableViewController.h; sourceTree = "<group>"; };
 		390A118C1DBA416C0079D4DF /* CJHomeChildTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHomeChildTableViewController.m; sourceTree = "<group>"; };
 		390A118D1DBA416C0079D4DF /* CJHomeChildTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJHomeChildTableViewController.xib; sourceTree = "<group>"; };
+		390CBCC51DBE3BAD001600AE /* CJNewCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJNewCollectionHeaderView.h; sourceTree = "<group>"; };
+		390CBCC61DBE3BAD001600AE /* CJNewCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJNewCollectionHeaderView.m; sourceTree = "<group>"; };
+		390CBCC71DBE3BAD001600AE /* CJNewCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJNewCollectionHeaderView.xib; sourceTree = "<group>"; };
 		390D54231DB8E1F200E9D605 /* LXNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNetworking.h; sourceTree = "<group>"; };
 		390D54241DB8E1F200E9D605 /* LXNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNetworking.m; sourceTree = "<group>"; };
 		390D54291DB8E64B00E9D605 /* UIView+Convience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Convience.h"; path = "../Tool/UIView+Convience.h"; sourceTree = "<group>"; };
 		390D542A1DB8E64B00E9D605 /* UIView+Convience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Convience.m"; path = "../Tool/UIView+Convience.m"; sourceTree = "<group>"; };
+		390DCD551DCA2B3A008DE30A /* CJNewProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJNewProductViewController.h; sourceTree = "<group>"; };
+		390DCD561DCA2B3A008DE30A /* CJNewProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJNewProductViewController.m; sourceTree = "<group>"; };
+		390DCD581DCA417D008DE30A /* UIImage+CJScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CJScale.h"; sourceTree = "<group>"; };
+		390DCD591DCA417D008DE30A /* UIImage+CJScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CJScale.m"; sourceTree = "<group>"; };
 		39280C091DBB161A00EB5B06 /* CJHomeChildTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHomeChildTableViewCell.h; sourceTree = "<group>"; };
 		39280C0A1DBB161A00EB5B06 /* CJHomeChildTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHomeChildTableViewCell.m; sourceTree = "<group>"; };
 		39280C0B1DBB161A00EB5B06 /* CJHomeChildTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJHomeChildTableViewCell.xib; sourceTree = "<group>"; };
@@ -191,6 +202,8 @@
 				390D542A1DB8E64B00E9D605 /* UIView+Convience.m */,
 				39280C141DBB3C0400EB5B06 /* UITableView+CJRefresh.h */,
 				39280C151DBB3C0400EB5B06 /* UITableView+CJRefresh.m */,
+				390DCD581DCA417D008DE30A /* UIImage+CJScale.h */,
+				390DCD591DCA417D008DE30A /* UIImage+CJScale.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -210,8 +223,8 @@
 		39FC52BD1DB874BA00BFC34E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				39FC52D91DB88A1F00BFC34E /* FirstChildController */,
 				39FC52BE1DB874BA00BFC34E /* FirstController */,
+				39FC52D91DB88A1F00BFC34E /* FirstChildController */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -270,6 +283,8 @@
 		39FC52C41DB874BA00BFC34E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				390DCD551DCA2B3A008DE30A /* CJNewProductViewController.h */,
+				390DCD561DCA2B3A008DE30A /* CJNewProductViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,6 +299,9 @@
 		39FC52C61DB874BA00BFC34E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				390CBCC51DBE3BAD001600AE /* CJNewCollectionHeaderView.h */,
+				390CBCC61DBE3BAD001600AE /* CJNewCollectionHeaderView.m */,
+				390CBCC71DBE3BAD001600AE /* CJNewCollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -570,6 +588,7 @@
 				39FC52EF1DB88E8900BFC34E /* CJHomeChildCollectionCell.xib in Resources */,
 				390A118F1DBA416C0079D4DF /* CJHomeChildTableViewController.xib in Resources */,
 				39FC53011DB8AE0100BFC34E /* CJHomeChildTableHeaderView.xib in Resources */,
+				390CBCC91DBE3BAD001600AE /* CJNewCollectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +647,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				390CBCC81DBE3BAD001600AE /* CJNewCollectionHeaderView.m in Sources */,
 				39FC52E21DB88AE700BFC34E /* CJBaseViewController.m in Sources */,
 				39FC52DF1DB88AD700BFC34E /* CJHomeViewController.m in Sources */,
 				390A118E1DBA416C0079D4DF /* CJHomeChildTableViewController.m in Sources */,
@@ -635,6 +655,7 @@
 				39FC52E91DB88C8000BFC34E /* CJHomeChildCollectionViewController.m in Sources */,
 				3904C8FC1DBCC5AB00209B5B /* CJCollectionView.m in Sources */,
 				398660471DB9ADCD008DC367 /* CJImageView.m in Sources */,
+				390DCD5A1DCA417D008DE30A /* UIImage+CJScale.m in Sources */,
 				390D54251DB8E1F200E9D605 /* LXNetworking.m in Sources */,
 				39FC52AD1DB866B000BFC34E /* DailyShopping.xcdatamodeld in Sources */,
 				39FC52FF1DB8ADF100BFC34E /* CJHomeChildTableHeaderView.m in Sources */,
@@ -649,6 +670,7 @@
 				39280C131DBB36E800EB5B06 /* CJTool.m in Sources */,
 				390D542B1DB8E64B00E9D605 /* UIView+Convience.m in Sources */,
 				39280C191DBB44D900EB5B06 /* CJTableView.m in Sources */,
+				390DCD571DCA2B3A008DE30A /* CJNewProductViewController.m in Sources */,
 				39FC52E51DB88BF100BFC34E /* CJLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

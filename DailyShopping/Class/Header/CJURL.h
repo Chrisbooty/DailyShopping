@@ -36,6 +36,8 @@
     #define CJHomeChildFruitURL CJBaseHost@"/operation/13/groups?opt_type=1&size=50&offset=%ld"
     //母婴 - size offset
     #define CJHomeChildBabyURL CJBaseHost@"/operation/4/groups?opt_type=1&size=50&offset=%ld"
+/** 上新URL */
+#define CJNewProductURL CJDataHost@"/v3/newlist?size=50&page=%ld"
 
 
 

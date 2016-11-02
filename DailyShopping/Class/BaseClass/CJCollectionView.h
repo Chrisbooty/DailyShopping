@@ -14,7 +14,8 @@
  设置collectionView上下拉刷新
  
  @param controller 控制器
+ @param isPage 网络字段是否是page
  */
-- (void)setCollectionViewRefreshWithController:(CJBaseViewController *)controller;
+- (void)setCollectionViewRefreshWithController:(CJBaseViewController *)controller isPage:(BOOL)isPage;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "CJTool.h"
+#import "UIImage+CJScale.h"
 #import <MBProgressHUD.h>
 
 @implementation CJTool
@@ -89,11 +90,13 @@ static CJTool *tool;
 + (void)setTabbarWithController:(UIViewController *)controller withImageName:(NSString *)imageName withTitle:(NSString *)title
 {
     //自定义tabbar
-    controller.tabBarItem.imageInsets = UIEdgeInsetsMake(3, 3, 3, 3);
-    controller.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -4);
-    controller.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@-hl",imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    controller.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    controller.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -3);
+    //    controller.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@-hl",imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    //    controller.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     controller.title = title;
     controller.tabBarController.tabBar.tintColor = [UIColor colorWithRed: 252/255.0 green: 44/255.0 blue: 71 /255.0 alpha:1];
+    //    controller.tabBarItem.imageInsets = UIEdgeInsetsMake(8, 0, -8, 0);
+    controller.tabBarItem.selectedImage = [[UIImage alloc] imageWithImage:[[UIImage imageNamed:[NSString stringWithFormat:@"%@-hl",imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] scaledToSize:CGSizeMake(20, 20) andOffSet:CGPointMake(0, 0)];
+    controller.tabBarItem.image = [[UIImage alloc] imageWithImage:[[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] scaledToSize:CGSizeMake(20, 20) andOffSet:CGPointMake(0, 0)];
 }
 @end

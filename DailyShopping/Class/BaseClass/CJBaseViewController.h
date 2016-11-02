@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CJURL.h"
+#import "CJTool.h"
+#import "CJHeader.h"
+#import "LXNetworking.h"
 
 @interface CJBaseViewController : UIViewController
 {
