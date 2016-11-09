@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CJNewCollectionHeaderView" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CJNewCollectionHeaderView" id="U6b-Vx-4bR" customClass="CJNewCollectionHeaderView">
             <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -39,21 +39,21 @@
                                     <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EUx-eP-P1K">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EUx-eP-P1K" userLabel="同城1">
                                     <rect key="frame" x="15" y="67.5" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="20" id="CGM-6m-YPl"/>
                                         <constraint firstAttribute="height" constant="20" id="DNF-jF-LlJ"/>
                                     </constraints>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y3d-Eo-RsM">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y3d-Eo-RsM" userLabel="同城2">
                                     <rect key="frame" x="40" y="67.5" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="Hrm-Ji-K4C"/>
                                         <constraint firstAttribute="width" constant="20" id="IHZ-oL-tZ0"/>
                                     </constraints>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rank_selected_subject_more" translatesAutoresizingMaskIntoConstraints="NO" id="9rA-UB-fU7">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rank_selected_subject_more" translatesAutoresizingMaskIntoConstraints="NO" id="9rA-UB-fU7">
                                     <rect key="frame" x="65" y="67.5" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="3JB-YU-D7H"/>
@@ -110,21 +110,21 @@
                                     <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2QQ-P8-QeF">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2QQ-P8-QeF" userLabel="精选1">
                                     <rect key="frame" x="15" y="67.5" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="20" id="XWq-yZ-hbJ"/>
                                         <constraint firstAttribute="height" constant="20" id="mga-rW-KfW"/>
                                     </constraints>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Lv-D7-6AK">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Lv-D7-6AK" userLabel="精选2">
                                     <rect key="frame" x="40" y="67.5" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="5vq-cP-K2I"/>
                                         <constraint firstAttribute="width" constant="20" id="jaH-TA-5YU"/>
                                     </constraints>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rank_selected_subject_more" translatesAutoresizingMaskIntoConstraints="NO" id="gc8-vc-WGc">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rank_selected_subject_more" translatesAutoresizingMaskIntoConstraints="NO" id="gc8-vc-WGc">
                                     <rect key="frame" x="65" y="67.5" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="20" id="Mv0-In-rJN"/>
@@ -202,6 +202,14 @@
                 <constraint firstItem="Rta-67-Am7" firstAttribute="top" secondItem="2Un-mJ-fgb" secondAttribute="bottom" id="sUN-ev-5kU"/>
                 <constraint firstItem="2Un-mJ-fgb" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="utE-zn-HNJ"/>
             </constraints>
+            <connections>
+                <outlet property="cityOneImgV" destination="EUx-eP-P1K" id="8u5-ks-HSC"/>
+                <outlet property="cityTwoImgV" destination="y3d-Eo-RsM" id="E7X-pa-bTI"/>
+                <outlet property="leftBgImgV" destination="9rA-UB-fU7" id="pO9-De-qFR"/>
+                <outlet property="perfecOnetImgV" destination="2QQ-P8-QeF" id="SuN-St-lmm"/>
+                <outlet property="perfectTwoImgV" destination="9Lv-D7-6AK" id="9YI-8O-E3e"/>
+                <outlet property="rightBgImgV" destination="gc8-vc-WGc" id="Q0Y-lt-x81"/>
+            </connections>
             <point key="canvasLocation" x="79.5" y="13"/>
         </collectionReusableView>
     </objects>

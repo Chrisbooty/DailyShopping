@@ -47,11 +47,26 @@
 {
     _model = model;
     
-    [_goodsImageView sd_setImageWithURL:model.thumb_url placeholderImage:[UIImage imageNamed:@"photo"]];
+    [CJTool setImageViewWithYYImageKit:_goodsImageView withURL:model.thumb_url];
     _goodstitleLabel.text = model.goods_name;
     
-    _goodsGroupLabel.text = [NSString stringWithFormat:@"%ld人团·已团%@万件",model.customer_num,[CJTool treatProductCount:model.cnt]];
-    _goodsPriceLabel.text = [NSString stringWithFormat:@"¥%@",[CJTool changeFloat:[NSString stringWithFormat:@"%ld",model.price]]];
+    if (model.time.length > 0) {
+        NSString * tempStr;
+        NSInteger time = [CJTool intervalFromLastDate:model.time].integerValue;
+        if (time > 59) {
+            tempStr = @"%ld人团·%ld小时前";
+            time = time / 60;
+        }else
+        {
+            tempStr = @"%ld人团·%ld分钟前";
+        }
+        _goodsGroupLabel.text = [NSString stringWithFormat:tempStr,model.customer_num,time];
+    }else
+    {
+        _goodsGroupLabel.text = [NSString stringWithFormat:@"%ld人团·已团%@万件",model.customer_num,[CJTool treatProductCount:model.cnt]];
+    }
+    
+    _goodsPriceLabel.text = [NSString stringWithFormat:@"¥%@",[CJTool changePrice:[NSString stringWithFormat:@"%ld",model.price]]];
 }
 
 @end

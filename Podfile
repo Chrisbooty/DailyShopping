@@ -9,5 +9,8 @@ pod 'MJRefresh'
 pod 'MBProgressHUD'
 #pod 'MJExtension'
 pod 'YYModel'
+#pod 'YYImage'
+pod 'YYWebImage'
+pod 'UITableView+FDTemplateLayoutCell'
 
 end

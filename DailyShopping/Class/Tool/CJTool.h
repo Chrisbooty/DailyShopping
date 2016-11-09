@@ -29,7 +29,7 @@
  @param string 转化前价格
  @return 转化后价格
  */
-+ (NSString *)changeFloat:(NSString *)string;
++ (NSString *)changePrice:(NSString *)string;
 /**
  计算商品数量
 
@@ -51,5 +51,16 @@
  @param title      显示文字
  */
 + (void)setTabbarWithController:(UIViewController *)controller withImageName:(NSString *)imageName withTitle:(NSString *)title;
+
+/**
+ 计算时间差
+
+ @param dateString2 时间(单位：秒)
+ */
++ (NSString *)intervalFromLastDate: (NSString *) dateString2;
+/**
+ 网路请求设置image
+ */
++ (void)setImageViewWithYYImageKit:(UIImageView *)imageView withURL:(NSURL *)url;
 
 @end

@@ -56,14 +56,15 @@
     [self loadImageForCell];
     _goodsDescriptionLabel.text = model.goods_name;
     [_goodsGroupCntBtn setTitle:[NSString stringWithFormat:@"%@人团",model.customer_num] forState:UIControlStateNormal];
-    _goodsGruopPriceLabel.text = [CJTool changeFloat:model.price];
-    [CJTool setRichTextWithLabel:_goodsSinglePriceLabel withText:[NSString stringWithFormat:@"单买价 %@",[CJTool changeFloat:model.normal_price]]];
+    _goodsGruopPriceLabel.text = [CJTool changePrice:model.price];
+    [CJTool setRichTextWithLabel:_goodsSinglePriceLabel withText:[NSString stringWithFormat:@"单买价 %@",[CJTool changePrice:model.normal_price]]];
 }
 
 
 - (void)loadImageForCell
 {
-    [_goodsImageView sd_setImageWithURL:_model.image_url placeholderImage:[UIImage imageNamed:@"photo"]];
+//    [_goodsImageView sd_setImageWithURL:_model.image_url placeholderImage:[UIImage imageNamed:@"photo"]];
+    [CJTool setImageViewWithYYImageKit:_goodsImageView withURL:_model.image_url];
 }
 
 #pragma mark -点击开团按钮

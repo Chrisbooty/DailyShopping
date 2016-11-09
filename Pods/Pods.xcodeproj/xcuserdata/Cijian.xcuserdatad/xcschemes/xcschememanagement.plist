@@ -34,7 +34,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UITableView+FDTemplateLayoutCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YYModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,17 +62,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>256799B58074308771632DC937CF957F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2BFCA837F4ED5051277BDF9BA18AD6A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4410B9F381C9C26A04699049E06BC163</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>70BC44266C6FFE30D2C57129458E070B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>84EE269EFC80A849363980BCF94293A2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8D96FB6BF9CBAC3FD00AA3C3385A3EED</key>
+		<key>87638EFEE5B4BDAD2A956DB978419BDB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2060884C37EF4F3AB71D9DE9A59D4AF</key>
+		<key>C33BB7208DEEE64CE6D28C05C54011ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -73,6 +103,16 @@
 			<true/>
 		</dict>
 		<key>D0D0C9D20C43FA94D4C88FBFE2601B8E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E00C5E7508F705864B4AEC7E347C7B81</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6E3290FA8EDB5A1E8DF74D4CE70EE24</key>
 		<dict>
 			<key>primary</key>
 			<true/>

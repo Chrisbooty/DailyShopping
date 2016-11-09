@@ -23,5 +23,9 @@
 @property (nonatomic, assign) NSInteger cnt;
 /** 市场价 */
 @property (nonatomic, assign) NSInteger market_price;
+/**
+ 时间 - 秒
+ */
+@property (nonatomic, copy) NSString *time;
 
 @end
