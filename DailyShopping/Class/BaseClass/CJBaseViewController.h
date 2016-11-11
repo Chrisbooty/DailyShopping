@@ -10,7 +10,7 @@
 #import "CJURL.h"
 #import "CJTool.h"
 #import "CJHeader.h"
-#import "LXNetworking.h"
+#import "CJNetworking.h"
 
 @interface CJBaseViewController : UIViewController
 {

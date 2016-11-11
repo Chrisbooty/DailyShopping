@@ -8,7 +8,7 @@
 
 #import "CJNewCollectionHeaderView.h"
 #import <UIImageView+WebCache.h>
-#import "LXNetworking.h"
+#import "CJNetworking.h"
 
 @interface CJNewCollectionHeaderView ()
 
@@ -41,7 +41,7 @@
 
 - (void)setHeaderImg
 {
-    [LXNetworking getWithUrl:JCNewProductAvatarURL params:nil success:^(id response) {
+    [CJNetworking getWithUrl:JCNewProductAvatarURL params:nil success:^(id response) {
         
         NSArray *arr = response[@"goods_list"];
         [_cityOneImgV sd_setImageWithURL:[NSURL URLWithString:arr.firstObject[@"thumb_url"]] placeholderImage:[UIImage imageNamed:@"photo"]];
@@ -51,7 +51,7 @@
         
     } fail:^(NSError *error) {
         NSLog(@"CJNewCollectionHeaderView -- error %@",error);
-    } showHUD:nil andController:nil];
+    } showHUD:NO andController:nil];
 }
 
 @end

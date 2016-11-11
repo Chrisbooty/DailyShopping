@@ -7,7 +7,7 @@
 //
 
 #import "CJBaseViewController.h"
-#import "LXNetworking.h"
+#import "CJNetworking.h"
 
 #import <MBProgressHUD.h>
 

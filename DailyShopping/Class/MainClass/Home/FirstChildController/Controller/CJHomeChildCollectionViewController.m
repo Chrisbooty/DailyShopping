@@ -75,7 +75,7 @@ static CGFloat const column = 2;
 - (void)requestCellData
 {
     CJWeakSelf
-    [LXNetworking getWithUrl:[NSString stringWithFormat:self.URL,self.page] params:nil success:^(id response) {
+    [CJNetworking getWithUrl:[NSString stringWithFormat:self.URL,self.page] params:nil success:^(id response) {
         //普通cell
         if (weakSelf.isUpRefresh) {
             [weakSelf.dataArrM removeAllObjects];

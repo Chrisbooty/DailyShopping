@@ -8,7 +8,7 @@
 
 #import "CJHomeChildTableHeaderView.h"
 #import "CJImageView+CJGesture.h"
-#import "LXNetworking.h"
+#import "CJNetworking.h"
 #import <YYModel/YYModel.h>
 #import "CJURL.h"
 @interface CJHomeChildTableHeaderView () <UIScrollViewDelegate>
@@ -51,7 +51,7 @@ static CGFloat bannerViewHeight = 0;
     [super awakeFromNib];
     
 //    //获取轮播图数据
-//    [LXNetworking getWithUrl:CJHomeCarouselURL params:nil success:^(id response) {
+//    [CJNetworking getWithUrl:CJHomeCarouselURL params:nil success:^(id response) {
 //        
 //        NSArray *arr = response;
 //        NSMutableArray *bannerArrM = [NSMutableArray array];

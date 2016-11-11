@@ -8,7 +8,7 @@
 
 #import "CJHomeChildTableViewController.h"
 #import "CJHomeChildTableHeaderView.h"
-#import "LXNetworking.h"
+#import "CJNetworking.h"
 #import "CJHomeChildTableViewCell.h"
 #import "CJTableView.h"
 #import "CJRecommandTableCell.h"
@@ -70,7 +70,7 @@ static NSString * const recommandID = @"CJRecommandTableCell";
 - (void)createBannerView
 {
     //获取轮播图数据
-    [LXNetworking getWithUrl:CJHomeCarouselURL params:nil success:^(id response) {
+    [CJNetworking getWithUrl:CJHomeCarouselURL params:nil success:^(id response) {
         
         NSArray *arr = response;
         NSMutableArray *bannerArrM = [NSMutableArray array];
@@ -99,7 +99,7 @@ static NSString * const recommandID = @"CJRecommandTableCell";
 {
     
     CJWeakSelf
-    [LXNetworking getWithUrl:[NSString stringWithFormat:CJHomeRecommandCellURL,weakSelf.page] params:nil success:^(id response) {
+    [CJNetworking getWithUrl:[NSString stringWithFormat:CJHomeRecommandCellURL,weakSelf.page] params:nil success:^(id response) {
         //普通cell
         if (weakSelf.isUpRefresh) {
             weakSelf.loadRecom = NO;
