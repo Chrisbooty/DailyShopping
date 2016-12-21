@@ -63,7 +63,6 @@ static NSMutableArray *tasks;
     return [self baseRequestType:2 url:url params:params success:success fail:fail showHUD:showHUD andController:acontroller];
 }
 
-static BOOL isRequired = NO;
 +(CJURLSessionTask *)baseRequestType:(NSUInteger)type
                                  url:(NSString *)url
                               params:(NSDictionary *)params
@@ -76,8 +75,7 @@ static BOOL isRequired = NO;
         return nil;
     }
     
-    if (isRequired) return nil;
-    isRequired = YES;
+    
     if (showHUD==YES) {
         [acontroller.view showLoading];
     }
@@ -106,7 +104,6 @@ static BOOL isRequired = NO;
             if (showHUD==YES) {
                 [acontroller.view hideLoading];
             }
-            isRequired = NO;
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             DLog(@"error=%@",error);
             if (fail) {
@@ -118,7 +115,6 @@ static BOOL isRequired = NO;
             if (showHUD==YES) {
                 [acontroller.view hideLoading];
             }
-            isRequired = NO;
         }];
         
     }else{
@@ -168,7 +164,6 @@ static BOOL isRequired = NO;
             if (showHUD==YES) {
                 [acontroller.view hideLoading];
             }
-            isRequired = NO;
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             DLog(@"error=%@",error);
             if (fail) {
@@ -180,7 +175,6 @@ static BOOL isRequired = NO;
             if (showHUD==YES) {
                 [acontroller.view hideLoading];
             }
-            isRequired = NO;
         }];
         
     }

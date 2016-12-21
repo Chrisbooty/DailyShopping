@@ -27,8 +27,6 @@ static CGFloat const column = 2;
     
     _page = 0;
     [self.view showLoading];
-    
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated

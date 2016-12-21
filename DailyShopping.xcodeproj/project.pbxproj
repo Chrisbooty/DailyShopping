@@ -27,9 +27,11 @@
 		39280C131DBB36E800EB5B06 /* CJTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 39280C121DBB36E800EB5B06 /* CJTool.m */; };
 		39280C161DBB3C0400EB5B06 /* UITableView+CJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 39280C151DBB3C0400EB5B06 /* UITableView+CJRefresh.m */; };
 		39280C191DBB44D900EB5B06 /* CJTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39280C181DBB44D900EB5B06 /* CJTableView.m */; };
+		3939DCF31E0ABD65008F831B /* CJShoppingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3939DCF21E0ABD65008F831B /* CJShoppingController.m */; };
 		397083111DCB1ED4003229C5 /* CJLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 397083101DCB1ED4003229C5 /* CJLabel.m */; };
 		398660441DB9AB18008DC367 /* CJImageView+CJGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 398660431DB9AB18008DC367 /* CJImageView+CJGesture.m */; };
 		398660471DB9ADCD008DC367 /* CJImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 398660461DB9ADCD008DC367 /* CJImageView.m */; };
+		39B78E5C1DDFDE0500B2E18E /* UIButton+ChainSyntax.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B78E5B1DDFDE0500B2E18E /* UIButton+ChainSyntax.m */; };
 		39F9D2ED1DD5660300C93DF9 /* CJNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F9D2EC1DD5660300C93DF9 /* CJNetworking.m */; };
 		39F9D2F01DD5662E00C93DF9 /* UIView+Convience.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F9D2EF1DD5662E00C93DF9 /* UIView+Convience.m */; };
 		39FC52A11DB866B000BFC34E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FC52A01DB866B000BFC34E /* main.m */; };
@@ -86,6 +88,9 @@
 		39280C151DBB3C0400EB5B06 /* UITableView+CJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CJRefresh.m"; sourceTree = "<group>"; };
 		39280C171DBB44D900EB5B06 /* CJTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTableView.h; sourceTree = "<group>"; };
 		39280C181DBB44D900EB5B06 /* CJTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTableView.m; sourceTree = "<group>"; };
+		3939DCF11E0ABD65008F831B /* CJShoppingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJShoppingController.h; sourceTree = "<group>"; };
+		3939DCF21E0ABD65008F831B /* CJShoppingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJShoppingController.m; sourceTree = "<group>"; };
+		3939DCF41E0ABDE3008F831B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		396F74251DB9DD020002AB42 /* CJURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJURL.h; sourceTree = "<group>"; };
 		3970830F1DCB1ED4003229C5 /* CJLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJLabel.h; sourceTree = "<group>"; };
 		397083101DCB1ED4003229C5 /* CJLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJLabel.m; sourceTree = "<group>"; };
@@ -93,6 +98,8 @@
 		398660431DB9AB18008DC367 /* CJImageView+CJGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CJImageView+CJGesture.m"; sourceTree = "<group>"; };
 		398660451DB9ADCD008DC367 /* CJImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJImageView.h; sourceTree = "<group>"; };
 		398660461DB9ADCD008DC367 /* CJImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJImageView.m; sourceTree = "<group>"; };
+		39B78E5A1DDFDE0500B2E18E /* UIButton+ChainSyntax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ChainSyntax.h"; sourceTree = "<group>"; };
+		39B78E5B1DDFDE0500B2E18E /* UIButton+ChainSyntax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ChainSyntax.m"; sourceTree = "<group>"; };
 		39F9D2EB1DD5660300C93DF9 /* CJNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJNetworking.h; sourceTree = "<group>"; };
 		39F9D2EC1DD5660300C93DF9 /* CJNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJNetworking.m; sourceTree = "<group>"; };
 		39F9D2EE1DD5662E00C93DF9 /* UIView+Convience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Convience.h"; sourceTree = "<group>"; };
@@ -289,6 +296,8 @@
 		39FC52BB1DB874BA00BFC34E /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				39B78E5A1DDFDE0500B2E18E /* UIButton+ChainSyntax.h */,
+				39B78E5B1DDFDE0500B2E18E /* UIButton+ChainSyntax.m */,
 				39F9D2EE1DD5662E00C93DF9 /* UIView+Convience.h */,
 				39F9D2EF1DD5662E00C93DF9 /* UIView+Convience.m */,
 				398660421DB9AB18008DC367 /* CJImageView+CJGesture.h */,
@@ -306,9 +315,9 @@
 			children = (
 				39FC52BD1DB874BA00BFC34E /* Home */,
 				39FC52C21DB874BA00BFC34E /* NewProduct */,
+				39FC52D11DB874BA00BFC34E /* Shopping */,
 				39FC52C71DB874BA00BFC34E /* Personal */,
 				39FC52CC1DB874BA00BFC34E /* Search */,
-				39FC52D11DB874BA00BFC34E /* Shopping */,
 			);
 			path = MainClass;
 			sourceTree = "<group>";
@@ -498,6 +507,8 @@
 		39FC52D31DB874BA00BFC34E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3939DCF11E0ABD65008F831B /* CJShoppingController.h */,
+				3939DCF21E0ABD65008F831B /* CJShoppingController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -584,6 +595,7 @@
 			children = (
 				39FC52F71DB89D9D00BFC34E /* CJHeader.h */,
 				396F74251DB9DD020002AB42 /* CJURL.h */,
+				3939DCF41E0ABDE3008F831B /* PrefixHeader.pch */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -746,6 +758,7 @@
 				390A118E1DBA416C0079D4DF /* CJHomeChildTableViewController.m in Sources */,
 				39280C0C1DBB161A00EB5B06 /* CJHomeChildTableViewCell.m in Sources */,
 				39FC52E91DB88C8000BFC34E /* CJHomeChildCollectionViewController.m in Sources */,
+				3939DCF31E0ABD65008F831B /* CJShoppingController.m in Sources */,
 				3905806F1DD2F2BC00591154 /* CJRecommandGroupModel.m in Sources */,
 				3904C8FC1DBCC5AB00209B5B /* CJCollectionView.m in Sources */,
 				398660471DB9ADCD008DC367 /* CJImageView.m in Sources */,
@@ -761,6 +774,7 @@
 				398660441DB9AB18008DC367 /* CJImageView+CJGesture.m in Sources */,
 				39FC52A41DB866B000BFC34E /* AppDelegate.m in Sources */,
 				39FC52A11DB866B000BFC34E /* main.m in Sources */,
+				39B78E5C1DDFDE0500B2E18E /* UIButton+ChainSyntax.m in Sources */,
 				39FC52FC1DB8A3C900BFC34E /* CJHomeCollectionModel.m in Sources */,
 				39280C101DBB2DE400EB5B06 /* CJHomeChildTableCellModel.m in Sources */,
 				39280C131DBB36E800EB5B06 /* CJTool.m in Sources */,
@@ -885,6 +899,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EZ9549DPUB;
+				GCC_PREFIX_HEADER = DailyShopping/Class/Header/PrefixHeader.pch;
 				INFOPLIST_FILE = DailyShopping/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -899,6 +914,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EZ9549DPUB;
+				GCC_PREFIX_HEADER = DailyShopping/Class/Header/PrefixHeader.pch;
 				INFOPLIST_FILE = DailyShopping/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

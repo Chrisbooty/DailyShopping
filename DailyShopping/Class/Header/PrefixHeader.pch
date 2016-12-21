@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  DailyShopping
+//
+//  Created by Cijian on 2016/12/21.
+//  Copyright © 2016年 Cijian. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "CJTool.h"
+#import "CJNetworking.h"
+
+#endif /* PrefixHeader_pch */

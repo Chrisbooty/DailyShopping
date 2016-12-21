@@ -8,7 +8,7 @@
 
 #import "CJNewProductViewController.h"
 #import "CJNewCollectionHeaderView.h"
-
+#import "UIButton+ChainSyntax.h"
 
 @interface CJNewProductViewController ()
 

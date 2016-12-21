@@ -51,6 +51,7 @@ static NSString * const recommandID = @"CJRecommandTableCell";
     [self getDefaultPage];
     //设置contentInset，防止Tabbar遮住内容
     _tableView.contentInset = UIEdgeInsetsMake(0, 0, 49, 0);
+    
     //设置上下拉刷新控件
     [_tableView setTableViewRefreshWithController:self];
     
@@ -58,8 +59,8 @@ static NSString * const recommandID = @"CJRecommandTableCell";
     [_tableView registerNib:[UINib nibWithNibName:commonID bundle:nil] forCellReuseIdentifier:commonID];
     [_tableView registerNib:[UINib nibWithNibName:recommandID bundle:nil] forCellReuseIdentifier:recommandID];
     
-    [self requestCellData];
     [self createBannerView];
+    [self requestCellData];
 }
 #pragma mark -获取默认page值
 - (void)getDefaultPage
@@ -89,7 +90,6 @@ static NSString * const recommandID = @"CJRecommandTableCell";
         tempRect.size.height = CWidth * 17/24 + 160;
         _headerView.frame = tempRect;
         _tableView.tableHeaderView = _headerView;
-        
     } fail:^(NSError *error) {
         NSLog(@"---+++ %@",error);
     } showHUD:YES andController:self];
