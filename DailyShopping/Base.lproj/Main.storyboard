@@ -184,11 +184,35 @@
                     <view key="view" contentMode="scaleToFill" id="zv6-Ah-Jm3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lvc-eS-sNf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="i2X-4Z-X16" id="iOB-JZ-CK0"/>
+                                    <outlet property="delegate" destination="i2X-4Z-X16" id="O21-ko-SZt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Lvc-eS-sNf" secondAttribute="trailing" id="6Gl-zh-IPE"/>
+                            <constraint firstItem="OMh-ta-i0T" firstAttribute="top" secondItem="Lvc-eS-sNf" secondAttribute="bottom" id="NKl-Rl-drZ"/>
+                            <constraint firstItem="Lvc-eS-sNf" firstAttribute="leading" secondItem="zv6-Ah-Jm3" secondAttribute="leading" id="QGA-ZM-GcX"/>
+                            <constraint firstItem="Lvc-eS-sNf" firstAttribute="top" secondItem="xOV-Cm-30s" secondAttribute="bottom" id="vIK-as-k2L"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="海淘专区" id="1GB-Yg-fQc"/>
+                    <connections>
+                        <outlet property="tableView" destination="Lvc-eS-sNf" id="jl1-BX-2NI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJH-80-cp0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="qeu-lN-EsY">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="1388" y="1286"/>
         </scene>

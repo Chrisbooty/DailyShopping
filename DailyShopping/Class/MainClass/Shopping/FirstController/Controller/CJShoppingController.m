@@ -10,6 +10,13 @@
 
 @interface CJShoppingController ()
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+/**
+ 数据源
+ */
+@property (nonatomic, strong) NSMutableArray *dataArrM;
+
 @end
 
 @implementation CJShoppingController
@@ -19,6 +26,28 @@
     [super awakeFromNib];
     
     [CJTool setTabbarWithController:self withImageName:@"oversea" withTitle:@"海淘"];
+}
+
+- (void)requestCellData
+{
+    [CJNetworking getWithUrl:[NSString stringWithFormat:CJShopping,_page] params:nil success:^(id response) {
+        if (self.isUpRefresh) {
+            [self.dataArrM removeAllObjects];
+        }
+        //
+//        NSArray *
+        
+        
+        [self endRefreshing];
+    } fail:^(NSError *error) {
+        [self endRefreshing];
+    } showHUD:nil andController:nil];
+}
+
+- (void)endRefreshing
+{
+    [_tableView.mj_header endRefreshing];
+    [_tableView.mj_footer endRefreshing];
 }
 
 - (void)viewDidLoad {
@@ -31,14 +60,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSMutableArray *)dataArrM
+{
+    if (!_dataArrM) {
+        _dataArrM = [NSMutableArray array];
+    }
+    return _dataArrM;
 }
-*/
 
 @end

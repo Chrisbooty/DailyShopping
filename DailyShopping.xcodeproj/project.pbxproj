@@ -13,8 +13,6 @@
 		390580781DD2F80700591154 /* CJRecommandGoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 390580771DD2F80700591154 /* CJRecommandGoodModel.m */; };
 		390580811DD303F300591154 /* CJRecommandTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905807F1DD303F300591154 /* CJRecommandTableCell.m */; };
 		390580821DD303F300591154 /* CJRecommandTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 390580801DD303F300591154 /* CJRecommandTableCell.xib */; };
-		390580881DD308AC00591154 /* CJRecommandGoodView.m in Sources */ = {isa = PBXBuildFile; fileRef = 390580871DD308AC00591154 /* CJRecommandGoodView.m */; };
-		3905808A1DD308B600591154 /* CJRecommandGoodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 390580891DD308B600591154 /* CJRecommandGoodView.xib */; };
 		390A118E1DBA416C0079D4DF /* CJHomeChildTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 390A118C1DBA416C0079D4DF /* CJHomeChildTableViewController.m */; };
 		390A118F1DBA416C0079D4DF /* CJHomeChildTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 390A118D1DBA416C0079D4DF /* CJHomeChildTableViewController.xib */; };
 		390CBCC81DBE3BAD001600AE /* CJNewCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 390CBCC61DBE3BAD001600AE /* CJNewCollectionHeaderView.m */; };
@@ -28,6 +26,14 @@
 		39280C161DBB3C0400EB5B06 /* UITableView+CJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 39280C151DBB3C0400EB5B06 /* UITableView+CJRefresh.m */; };
 		39280C191DBB44D900EB5B06 /* CJTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39280C181DBB44D900EB5B06 /* CJTableView.m */; };
 		3939DCF31E0ABD65008F831B /* CJShoppingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3939DCF21E0ABD65008F831B /* CJShoppingController.m */; };
+		3939DCF71E0AC332008F831B /* CJShoppingHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3939DCF61E0AC332008F831B /* CJShoppingHeaderView.m */; };
+		3939DCF91E0AC33B008F831B /* CJShoppingHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3939DCF81E0AC33B008F831B /* CJShoppingHeaderView.xib */; };
+		3939DD001E0AC833008F831B /* CJShoppingClassifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3939DCFE1E0AC833008F831B /* CJShoppingClassifyCell.m */; };
+		3939DD011E0AC833008F831B /* CJShoppingClassifyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3939DCFF1E0AC833008F831B /* CJShoppingClassifyCell.xib */; };
+		3939DD051E0AC8A1008F831B /* CJShoppingRegionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3939DD031E0AC8A1008F831B /* CJShoppingRegionCell.m */; };
+		3939DD061E0AC8A1008F831B /* CJShoppingRegionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3939DD041E0AC8A1008F831B /* CJShoppingRegionCell.xib */; };
+		3939DD0A1E0AD039008F831B /* CJRecommandCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3939DD081E0AD039008F831B /* CJRecommandCollectionCell.m */; };
+		3939DD0B1E0AD039008F831B /* CJRecommandCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3939DD091E0AD039008F831B /* CJRecommandCollectionCell.xib */; };
 		397083111DCB1ED4003229C5 /* CJLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 397083101DCB1ED4003229C5 /* CJLabel.m */; };
 		398660441DB9AB18008DC367 /* CJImageView+CJGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 398660431DB9AB18008DC367 /* CJImageView+CJGesture.m */; };
 		398660471DB9ADCD008DC367 /* CJImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 398660461DB9ADCD008DC367 /* CJImageView.m */; };
@@ -64,9 +70,6 @@
 		3905807E1DD303F300591154 /* CJRecommandTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRecommandTableCell.h; sourceTree = "<group>"; };
 		3905807F1DD303F300591154 /* CJRecommandTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRecommandTableCell.m; sourceTree = "<group>"; };
 		390580801DD303F300591154 /* CJRecommandTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJRecommandTableCell.xib; sourceTree = "<group>"; };
-		390580861DD308AC00591154 /* CJRecommandGoodView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRecommandGoodView.h; sourceTree = "<group>"; };
-		390580871DD308AC00591154 /* CJRecommandGoodView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRecommandGoodView.m; sourceTree = "<group>"; };
-		390580891DD308B600591154 /* CJRecommandGoodView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJRecommandGoodView.xib; sourceTree = "<group>"; };
 		390A118B1DBA416C0079D4DF /* CJHomeChildTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHomeChildTableViewController.h; sourceTree = "<group>"; };
 		390A118C1DBA416C0079D4DF /* CJHomeChildTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHomeChildTableViewController.m; sourceTree = "<group>"; };
 		390A118D1DBA416C0079D4DF /* CJHomeChildTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJHomeChildTableViewController.xib; sourceTree = "<group>"; };
@@ -91,6 +94,18 @@
 		3939DCF11E0ABD65008F831B /* CJShoppingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJShoppingController.h; sourceTree = "<group>"; };
 		3939DCF21E0ABD65008F831B /* CJShoppingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJShoppingController.m; sourceTree = "<group>"; };
 		3939DCF41E0ABDE3008F831B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3939DCF51E0AC332008F831B /* CJShoppingHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJShoppingHeaderView.h; sourceTree = "<group>"; };
+		3939DCF61E0AC332008F831B /* CJShoppingHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJShoppingHeaderView.m; sourceTree = "<group>"; };
+		3939DCF81E0AC33B008F831B /* CJShoppingHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJShoppingHeaderView.xib; sourceTree = "<group>"; };
+		3939DCFD1E0AC833008F831B /* CJShoppingClassifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJShoppingClassifyCell.h; sourceTree = "<group>"; };
+		3939DCFE1E0AC833008F831B /* CJShoppingClassifyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJShoppingClassifyCell.m; sourceTree = "<group>"; };
+		3939DCFF1E0AC833008F831B /* CJShoppingClassifyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJShoppingClassifyCell.xib; sourceTree = "<group>"; };
+		3939DD021E0AC8A1008F831B /* CJShoppingRegionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJShoppingRegionCell.h; sourceTree = "<group>"; };
+		3939DD031E0AC8A1008F831B /* CJShoppingRegionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJShoppingRegionCell.m; sourceTree = "<group>"; };
+		3939DD041E0AC8A1008F831B /* CJShoppingRegionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJShoppingRegionCell.xib; sourceTree = "<group>"; };
+		3939DD071E0AD039008F831B /* CJRecommandCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRecommandCollectionCell.h; sourceTree = "<group>"; };
+		3939DD081E0AD039008F831B /* CJRecommandCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRecommandCollectionCell.m; sourceTree = "<group>"; };
+		3939DD091E0AD039008F831B /* CJRecommandCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJRecommandCollectionCell.xib; sourceTree = "<group>"; };
 		396F74251DB9DD020002AB42 /* CJURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJURL.h; sourceTree = "<group>"; };
 		3970830F1DCB1ED4003229C5 /* CJLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJLabel.h; sourceTree = "<group>"; };
 		397083101DCB1ED4003229C5 /* CJLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJLabel.m; sourceTree = "<group>"; };
@@ -204,9 +219,9 @@
 				3905807E1DD303F300591154 /* CJRecommandTableCell.h */,
 				3905807F1DD303F300591154 /* CJRecommandTableCell.m */,
 				390580801DD303F300591154 /* CJRecommandTableCell.xib */,
-				390580861DD308AC00591154 /* CJRecommandGoodView.h */,
-				390580871DD308AC00591154 /* CJRecommandGoodView.m */,
-				390580891DD308B600591154 /* CJRecommandGoodView.xib */,
+				3939DD071E0AD039008F831B /* CJRecommandCollectionCell.h */,
+				3939DD081E0AD039008F831B /* CJRecommandCollectionCell.m */,
+				3939DD091E0AD039008F831B /* CJRecommandCollectionCell.xib */,
 			);
 			name = RecommandCell;
 			sourceTree = "<group>";
@@ -219,6 +234,36 @@
 				39FC53001DB8AE0100BFC34E /* CJHomeChildTableHeaderView.xib */,
 			);
 			name = TableHeaderView;
+			sourceTree = "<group>";
+		};
+		3939DCFA1E0AC7D4008F831B /* ShoppingHeader */ = {
+			isa = PBXGroup;
+			children = (
+				3939DCF51E0AC332008F831B /* CJShoppingHeaderView.h */,
+				3939DCF61E0AC332008F831B /* CJShoppingHeaderView.m */,
+				3939DCF81E0AC33B008F831B /* CJShoppingHeaderView.xib */,
+			);
+			name = ShoppingHeader;
+			sourceTree = "<group>";
+		};
+		3939DCFB1E0AC7E3008F831B /* Header-RegionCell */ = {
+			isa = PBXGroup;
+			children = (
+				3939DD021E0AC8A1008F831B /* CJShoppingRegionCell.h */,
+				3939DD031E0AC8A1008F831B /* CJShoppingRegionCell.m */,
+				3939DD041E0AC8A1008F831B /* CJShoppingRegionCell.xib */,
+			);
+			name = "Header-RegionCell";
+			sourceTree = "<group>";
+		};
+		3939DCFC1E0AC7F9008F831B /* Header-ClassifyCell */ = {
+			isa = PBXGroup;
+			children = (
+				3939DCFD1E0AC833008F831B /* CJShoppingClassifyCell.h */,
+				3939DCFE1E0AC833008F831B /* CJShoppingClassifyCell.m */,
+				3939DCFF1E0AC833008F831B /* CJShoppingClassifyCell.xib */,
+			);
+			name = "Header-ClassifyCell";
 			sourceTree = "<group>";
 		};
 		39FC52931DB866B000BFC34E = {
@@ -525,6 +570,9 @@
 		39FC52D51DB874BA00BFC34E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3939DCFC1E0AC7F9008F831B /* Header-ClassifyCell */,
+				3939DCFB1E0AC7E3008F831B /* Header-RegionCell */,
+				3939DCFA1E0AC7D4008F831B /* ShoppingHeader */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -683,12 +731,15 @@
 				39FC52B21DB866B000BFC34E /* LaunchScreen.storyboard in Resources */,
 				39FC52AF1DB866B000BFC34E /* Assets.xcassets in Resources */,
 				390580821DD303F300591154 /* CJRecommandTableCell.xib in Resources */,
-				3905808A1DD308B600591154 /* CJRecommandGoodView.xib in Resources */,
 				39280C0D1DBB161A00EB5B06 /* CJHomeChildTableViewCell.xib in Resources */,
 				39FC52AA1DB866B000BFC34E /* Main.storyboard in Resources */,
+				3939DD0B1E0AD039008F831B /* CJRecommandCollectionCell.xib in Resources */,
+				3939DD011E0AC833008F831B /* CJShoppingClassifyCell.xib in Resources */,
 				39FC52EF1DB88E8900BFC34E /* CJHomeChildCollectionCell.xib in Resources */,
 				390A118F1DBA416C0079D4DF /* CJHomeChildTableViewController.xib in Resources */,
 				39FC53011DB8AE0100BFC34E /* CJHomeChildTableHeaderView.xib in Resources */,
+				3939DCF91E0AC33B008F831B /* CJShoppingHeaderView.xib in Resources */,
+				3939DD061E0AC8A1008F831B /* CJShoppingRegionCell.xib in Resources */,
 				390CBCC91DBE3BAD001600AE /* CJNewCollectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -754,7 +805,6 @@
 				39FC52E21DB88AE700BFC34E /* CJBaseViewController.m in Sources */,
 				390580811DD303F300591154 /* CJRecommandTableCell.m in Sources */,
 				39FC52DF1DB88AD700BFC34E /* CJHomeViewController.m in Sources */,
-				390580881DD308AC00591154 /* CJRecommandGoodView.m in Sources */,
 				390A118E1DBA416C0079D4DF /* CJHomeChildTableViewController.m in Sources */,
 				39280C0C1DBB161A00EB5B06 /* CJHomeChildTableViewCell.m in Sources */,
 				39FC52E91DB88C8000BFC34E /* CJHomeChildCollectionViewController.m in Sources */,
@@ -762,6 +812,7 @@
 				3905806F1DD2F2BC00591154 /* CJRecommandGroupModel.m in Sources */,
 				3904C8FC1DBCC5AB00209B5B /* CJCollectionView.m in Sources */,
 				398660471DB9ADCD008DC367 /* CJImageView.m in Sources */,
+				3939DD001E0AC833008F831B /* CJShoppingClassifyCell.m in Sources */,
 				39F9D2F01DD5662E00C93DF9 /* UIView+Convience.m in Sources */,
 				397083111DCB1ED4003229C5 /* CJLabel.m in Sources */,
 				390DCD5A1DCA417D008DE30A /* UIImage+CJScale.m in Sources */,
@@ -772,13 +823,16 @@
 				39280C161DBB3C0400EB5B06 /* UITableView+CJRefresh.m in Sources */,
 				39FC52EE1DB88E8900BFC34E /* CJHomeChildCollectionCell.m in Sources */,
 				398660441DB9AB18008DC367 /* CJImageView+CJGesture.m in Sources */,
+				3939DD0A1E0AD039008F831B /* CJRecommandCollectionCell.m in Sources */,
 				39FC52A41DB866B000BFC34E /* AppDelegate.m in Sources */,
 				39FC52A11DB866B000BFC34E /* main.m in Sources */,
 				39B78E5C1DDFDE0500B2E18E /* UIButton+ChainSyntax.m in Sources */,
 				39FC52FC1DB8A3C900BFC34E /* CJHomeCollectionModel.m in Sources */,
 				39280C101DBB2DE400EB5B06 /* CJHomeChildTableCellModel.m in Sources */,
+				3939DCF71E0AC332008F831B /* CJShoppingHeaderView.m in Sources */,
 				39280C131DBB36E800EB5B06 /* CJTool.m in Sources */,
 				39280C191DBB44D900EB5B06 /* CJTableView.m in Sources */,
+				3939DD051E0AC8A1008F831B /* CJShoppingRegionCell.m in Sources */,
 				390DCD571DCA2B3A008DE30A /* CJNewProductViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

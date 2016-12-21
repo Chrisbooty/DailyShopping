@@ -13,7 +13,7 @@
 
 #define CJDataHost @"http://apiv2.yangkeduo.com"
 
-//---首页
+/*********************************首页*********************************/
 //首页轮播图URL
 #define CJHomeCarouselURL CJBaseHost@"/subjects"
 //推荐cell - size page
@@ -36,12 +36,16 @@
     #define CJHomeChildFruitURL CJBaseHost@"/operation/13/groups?opt_type=1&size=50&offset=%ld"
     //母婴 - size offset
     #define CJHomeChildBabyURL CJBaseHost@"/operation/4/groups?opt_type=1&size=50&offset=%ld"
-/** 上新URL */
+
+/*********************************上新*********************************/
     //cell数据
     #define CJNewProductURL CJDataHost@"/v3/newlist?size=50&page=%ld"
     //表头icon
     #define JCNewProductAvatarURL CJDataHost@"/avatars_subjects"
 
+/*********************************海淘*********************************/
+
+#define CJShopping CJBaseHost@"/v2/haitaov2?size=50&page=%ld"
 
 
 

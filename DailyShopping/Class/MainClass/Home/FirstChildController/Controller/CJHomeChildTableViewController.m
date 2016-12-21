@@ -156,37 +156,19 @@ static NSString * const recommandID = @"CJRecommandTableCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id model = _dataArrM[indexPath.row];
-    if ([model isKindOfClass:[CJHomeChildTableCellModel class]]) {
-        
-        CJHomeChildTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:commonID];
-        
-        cell.model = model;
-        return cell;
-    }else if ([model isKindOfClass:[CJRecommandGroupModel class]])
-    {
-        CJRecommandTableCell *cell = [tableView dequeueReusableCellWithIdentifier:recommandID];
-        cell.model = model;
-        return cell;
-    }
-    return nil;
+    NSString *ID = [model isKindOfClass:[CJHomeChildTableCellModel class]] ? commonID : recommandID;
+    CJHomeChildTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+    cell.model = model;
+    return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id model = _dataArrM[indexPath.row];
-    if ([model isKindOfClass:[CJHomeChildTableCellModel class]]) {
-        
-        return [tableView fd_heightForCellWithIdentifier:commonID configuration:^(CJHomeChildTableViewCell *cell) {
-            cell.model = model;
-        }];
-        
-    }else if ([model isKindOfClass:[CJRecommandGroupModel class]])
-    {
-
-        return [tableView fd_heightForCellWithIdentifier:recommandID configuration:^(CJRecommandTableCell *cell) {
-            cell.model = model;
-        }];
-    }
-    return 0;
+    NSString *ID = [model isKindOfClass:[CJHomeChildTableCellModel class]] ? commonID : recommandID;
+    return [tableView fd_heightForCellWithIdentifier:ID configuration:^(CJRecommandTableCell *cell) {
+        cell.model = model;
+    }];
 }
 
 #pragma mark -懒加载

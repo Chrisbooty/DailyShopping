@@ -36,4 +36,6 @@
  */
 - (void)getDefaultPage;
 
+- (void)endRefreshing;
+
 @end

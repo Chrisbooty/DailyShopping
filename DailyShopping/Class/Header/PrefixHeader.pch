@@ -11,5 +11,6 @@
 
 #import "CJTool.h"
 #import "CJNetworking.h"
+#import "CJBaseViewController.h"
 
 #endif /* PrefixHeader_pch */

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -46,26 +46,41 @@
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6t-Kq-0oc">
-                        <rect key="frame" x="0.0" y="45.5" width="375" height="189"/>
-                    </scrollView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="220-rK-FxS">
+                        <rect key="frame" x="0.0" y="44" width="375" height="190.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="190.5" id="Sax-bf-MbG"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bYH-YN-bdF">
+                            <size key="itemSize" width="115" height="190.5"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="dI3-BV-EqJ"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="uLa-zw-jS9"/>
+                        </connections>
+                    </collectionView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="220-rK-FxS" secondAttribute="trailing" id="2uJ-HR-0qL"/>
                     <constraint firstAttribute="trailing" secondItem="8BW-ld-cbt" secondAttribute="trailing" constant="10" id="3o0-CE-VOt"/>
+                    <constraint firstItem="220-rK-FxS" firstAttribute="top" secondItem="8BW-ld-cbt" secondAttribute="bottom" constant="7" id="B6a-JA-CeB"/>
+                    <constraint firstItem="8BW-ld-cbt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mmB-JG-9H2" secondAttribute="trailing" constant="10" id="DFx-Pq-o9Z"/>
                     <constraint firstItem="ltj-dk-KCm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="EP9-pX-GGN"/>
-                    <constraint firstItem="X6t-Kq-0oc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Izv-g8-Gjq"/>
                     <constraint firstAttribute="trailing" secondItem="ltj-dk-KCm" secondAttribute="trailing" id="KpM-MW-9Uf"/>
                     <constraint firstItem="ltj-dk-KCm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Pup-8P-cuG"/>
                     <constraint firstItem="8BW-ld-cbt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="UPc-Af-6Bm"/>
-                    <constraint firstAttribute="bottom" secondItem="X6t-Kq-0oc" secondAttribute="bottom" id="cae-ve-oXc"/>
-                    <constraint firstItem="X6t-Kq-0oc" firstAttribute="top" secondItem="mmB-JG-9H2" secondAttribute="bottom" constant="8.5" id="nzJ-Ad-Njl"/>
-                    <constraint firstAttribute="trailing" secondItem="X6t-Kq-0oc" secondAttribute="trailing" id="o8j-aX-4M0"/>
+                    <constraint firstAttribute="bottom" secondItem="220-rK-FxS" secondAttribute="bottom" id="YaJ-ss-wbz"/>
+                    <constraint firstItem="220-rK-FxS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fsl-RS-xvs"/>
                     <constraint firstItem="mmB-JG-9H2" firstAttribute="centerY" secondItem="8BW-ld-cbt" secondAttribute="centerY" id="rXE-KD-rF7"/>
                     <constraint firstItem="mmB-JG-9H2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="wWU-1j-cIJ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="containerView" destination="X6t-Kq-0oc" id="85T-iM-laL"/>
+                <outlet property="collectionView" destination="220-rK-FxS" id="V5s-Ay-lwz"/>
                 <outlet property="subjectL" destination="mmB-JG-9H2" id="0De-Rw-b5o"/>
             </connections>
             <point key="canvasLocation" x="16.5" y="-9"/>

@@ -7,7 +7,7 @@
 //
 
 #import "CJRecommandTableCell.h"
-#import "CJRecommandGoodView.h"
+#import "CJRecommandCollectionCell.h"
 
 @interface CJRecommandTableCell ()
 
@@ -15,10 +15,8 @@
  描述 - UILabel
  */
 @property (weak, nonatomic) IBOutlet UILabel *subjectL;
-/**
- scrollView容器
- */
-@property (weak, nonatomic) IBOutlet UIScrollView *containerView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 
 @end
 
@@ -27,6 +25,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    [_collectionView registerNib:[UINib nibWithNibName:@"CJRecommandCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"CJRecommandCollectionCell"];
 }
 
 - (IBAction)viewMoreClick {
@@ -37,45 +37,29 @@
 {
     _model = model;
     _subjectL.text = model.subject;
-    
-//    for (UIView *obj in _containerView.subviews) {
-//        [obj removeFromSuperview];
-//    }
-    NSInteger num = model.recommandGoodModels.count > 10 ? 10 : model.recommandGoodModels.count;
-    if (_containerView.subviews.count > 5) {
-        for (NSInteger i = 0; i < num; i++) {
-            
-            CJRecommandGoodView *goodView = _containerView.subviews[i];
-            goodView.model = model.recommandGoodModels[i];
-            _containerView.contentOffset = CGPointZero;
-        }
-    }else
-    {
-        [self createGoodView];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        _collectionView.contentOffset = CGPointZero;
+        [_collectionView reloadData];
+    });
 }
 
-- (void)createGoodView
+#pragma mark - CollectionView 代理方法
+#pragma mark -CollectionView --段数
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    CGFloat spacing = 10;
-    CGFloat viewH = 186;
-    CGFloat viewW = 120;
-    _containerView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 188);
-    
-    for (NSInteger i = 0; i < _model.recommandGoodModels.count; i++) {
-        
-        @autoreleasepool {
-            CJRecommandGoodView *goodView = [CJRecommandGoodView view];
-            CJRecommandGoodModel *goodModel = _model.recommandGoodModels[i];
-            goodView.frame = CGRectMake( spacing * (i+1) + viewW * i, 0, viewW, viewH);
-            goodView.model = goodModel;
-            [_containerView addSubview:goodView];
-            
-            if (i == _model.recommandGoodModels.count - 1) {
-                _containerView.contentSize =CGSizeMake(CGRectGetMaxX(goodView.frame) + spacing, 0);
-            }
-        }
-    }
+    return 1;
+}
+#pragma mark -CollectionView --行数
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return _model.recommandGoodModels.count;
+}
+#pragma mark -CollectionView --设置cell
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CJRecommandCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CJRecommandCollectionCell" forIndexPath:indexPath];
+    cell.model = _model.recommandGoodModels[indexPath.row];
+    return cell;
 }
 
 @end

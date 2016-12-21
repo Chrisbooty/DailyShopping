@@ -1,5 +1,5 @@
 //
-//  CJShoppingController.h
+//  CJShoppingHeaderView.h
 //  DailyShopping
 //
 //  Created by Cijian on 2016/12/21.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CJShoppingController : CJBaseViewController
+@interface CJShoppingHeaderView : UIView
 
 @end
