@@ -26,7 +26,7 @@
 
 - (void)getDefaultPage
 {
-    
+    _page = 1;
 }
 
 - (void)requestCellData

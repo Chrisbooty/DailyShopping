@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CJShopBannerModel : NSObject
+@interface CJShoppingRegionModel : NSObject
 
 /**
  banner 图片
  */
-@property (nonatomic, strong) NSURL *home_banner;
+@property (nonatomic, copy) NSString *home_banner;
 /**
  banner 名
  */

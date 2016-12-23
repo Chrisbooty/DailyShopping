@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3904C8FC1DBCC5AB00209B5B /* CJCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3904C8FB1DBCC5AB00209B5B /* CJCollectionView.m */; };
-		3905806C1DD2F08E00591154 /* CJShopBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905806B1DD2F08E00591154 /* CJShopBannerModel.m */; };
+		39054C271E0D5A2B00E0D10C /* CJShoppingClassifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39054C261E0D5A2B00E0D10C /* CJShoppingClassifyModel.m */; };
+		3905806C1DD2F08E00591154 /* CJShoppingRegionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905806B1DD2F08E00591154 /* CJShoppingRegionModel.m */; };
 		3905806F1DD2F2BC00591154 /* CJRecommandGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905806E1DD2F2BC00591154 /* CJRecommandGroupModel.m */; };
 		390580781DD2F80700591154 /* CJRecommandGoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 390580771DD2F80700591154 /* CJRecommandGoodModel.m */; };
 		390580811DD303F300591154 /* CJRecommandTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905807F1DD303F300591154 /* CJRecommandTableCell.m */; };
@@ -61,8 +62,10 @@
 /* Begin PBXFileReference section */
 		3904C8FA1DBCC5AB00209B5B /* CJCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCollectionView.h; sourceTree = "<group>"; };
 		3904C8FB1DBCC5AB00209B5B /* CJCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCollectionView.m; sourceTree = "<group>"; };
-		3905806A1DD2F08E00591154 /* CJShopBannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJShopBannerModel.h; sourceTree = "<group>"; };
-		3905806B1DD2F08E00591154 /* CJShopBannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJShopBannerModel.m; sourceTree = "<group>"; };
+		39054C251E0D5A2B00E0D10C /* CJShoppingClassifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJShoppingClassifyModel.h; sourceTree = "<group>"; };
+		39054C261E0D5A2B00E0D10C /* CJShoppingClassifyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJShoppingClassifyModel.m; sourceTree = "<group>"; };
+		3905806A1DD2F08E00591154 /* CJShoppingRegionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJShoppingRegionModel.h; sourceTree = "<group>"; };
+		3905806B1DD2F08E00591154 /* CJShoppingRegionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJShoppingRegionModel.m; sourceTree = "<group>"; };
 		3905806D1DD2F2BC00591154 /* CJRecommandGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRecommandGroupModel.h; sourceTree = "<group>"; };
 		3905806E1DD2F2BC00591154 /* CJRecommandGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJRecommandGroupModel.m; sourceTree = "<group>"; };
 		390580761DD2F80700591154 /* CJRecommandGoodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJRecommandGoodModel.h; sourceTree = "<group>"; };
@@ -162,6 +165,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39054C231E0D598A00E0D10C /* HeaderRegionModel */ = {
+			isa = PBXGroup;
+			children = (
+				3905806A1DD2F08E00591154 /* CJShoppingRegionModel.h */,
+				3905806B1DD2F08E00591154 /* CJShoppingRegionModel.m */,
+			);
+			name = HeaderRegionModel;
+			sourceTree = "<group>";
+		};
+		39054C241E0D5A0500E0D10C /* HeaderClassifyModel */ = {
+			isa = PBXGroup;
+			children = (
+				39054C251E0D5A2B00E0D10C /* CJShoppingClassifyModel.h */,
+				39054C261E0D5A2B00E0D10C /* CJShoppingClassifyModel.m */,
+			);
+			name = HeaderClassifyModel;
+			sourceTree = "<group>";
+		};
 		390580731DD2F75200591154 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,8 +582,8 @@
 		39FC52D41DB874BA00BFC34E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3905806A1DD2F08E00591154 /* CJShopBannerModel.h */,
-				3905806B1DD2F08E00591154 /* CJShopBannerModel.m */,
+				39054C241E0D5A0500E0D10C /* HeaderClassifyModel */,
+				39054C231E0D598A00E0D10C /* HeaderRegionModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -799,10 +820,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3905806C1DD2F08E00591154 /* CJShopBannerModel.m in Sources */,
+				3905806C1DD2F08E00591154 /* CJShoppingRegionModel.m in Sources */,
 				390CBCC81DBE3BAD001600AE /* CJNewCollectionHeaderView.m in Sources */,
 				39F9D2ED1DD5660300C93DF9 /* CJNetworking.m in Sources */,
 				39FC52E21DB88AE700BFC34E /* CJBaseViewController.m in Sources */,
+				39054C271E0D5A2B00E0D10C /* CJShoppingClassifyModel.m in Sources */,
 				390580811DD303F300591154 /* CJRecommandTableCell.m in Sources */,
 				39FC52DF1DB88AD700BFC34E /* CJHomeViewController.m in Sources */,
 				390A118E1DBA416C0079D4DF /* CJHomeChildTableViewController.m in Sources */,

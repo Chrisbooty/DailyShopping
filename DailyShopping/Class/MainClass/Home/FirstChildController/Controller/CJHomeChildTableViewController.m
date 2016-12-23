@@ -24,10 +24,6 @@
  tableView - 数据源
  */
 @property (nonatomic, strong) NSMutableArray *dataArrM;
-/**
- tableView 普通cell - 数据源
- */
-@property (nonatomic, strong) NSMutableArray *commonModelArr;
 /** 
  headerView 
  */
@@ -179,13 +175,7 @@ static NSString * const recommandID = @"CJRecommandTableCell";
     }
     return _dataArrM;
 }
-- (NSMutableArray *)commonModelArr
-{
-    if (_commonModelArr == nil) {
-        _commonModelArr = [NSMutableArray array];
-    }
-    return _commonModelArr;
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -24,4 +24,11 @@
     // Initialization code
 }
 
+- (void)setModel:(CJShoppingRegionModel *)model
+{
+    _model = model;
+    _imgV.image = [UIImage imageNamed:model.home_banner];
+    _nameL.text = model.subject;
+}
+
 @end

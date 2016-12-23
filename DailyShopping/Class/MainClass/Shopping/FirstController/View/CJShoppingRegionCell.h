@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CJShoppingRegionModel.h"
 
 @interface CJShoppingRegionCell : UICollectionViewCell
+
+/**
+ CJShoppingRegionModel
+ */
+@property (nonatomic, strong) CJShoppingRegionModel *model;
 
 @end

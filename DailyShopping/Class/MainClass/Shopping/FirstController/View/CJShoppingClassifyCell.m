@@ -22,4 +22,10 @@
     _imgV.layer.cornerRadius = 5;
 }
 
+- (void)setModel:(CJShoppingClassifyModel *)model
+{
+    _model = model;
+    _imgV.image = [UIImage imageNamed:model.imgName];
+}
+
 @end

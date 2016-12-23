@@ -6,8 +6,8 @@
 //  Copyright © 2016年 Cijian. All rights reserved.
 //
 
-#import "CJShopBannerModel.h"
+#import "CJShoppingRegionModel.h"
 
-@implementation CJShopBannerModel
+@implementation CJShoppingRegionModel
 
 @end

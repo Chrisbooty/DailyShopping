@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CJShoppingRegionCell.h"
+#import "CJShoppingClassifyCell.h"
 
 @interface CJShoppingHeaderView : UIView
 
+
++ (instancetype)view;
 @end
